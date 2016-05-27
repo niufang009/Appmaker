@@ -1,0 +1,71 @@
+.docs-platform{
+  display: inline-block;
+  padding: 50px 5px;
+  width: 48%;
+  background: $white;
+  text-align: center;
+  .icon{
+    display: block;
+    margin: 0 auto;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: $white;
+  }
+  .icon-apple{
+    background: $bgBlue;
+  }
+  .icon-android{
+    background: $green;
+  }
+  .icon-java{
+    background: $darkRed;
+  }
+  .icon-python{
+    background: $orange;
+  }
+  .icon-js{
+    background: #5d5d5d;
+  }
+  .icon-nodejs{
+    background: #444;
+  }
+  .icon-php{
+    background: #5A68A5;
+  }
+  .name{
+    margin: 20px auto 30px;
+    font-size: 24px;
+  }
+  .link{
+    display: block;
+    padding: 10px 0;
+    border-top: 1px dashed #E8E8E8;
+    color: inherit;
+    cursor: pointer;
+    &:hover{
+      color: $bgBlue;
+    }
+    &.last-link{
+      border-bottom: 1px dashed #E8E8E8;
+    }
+  }
+  .download{
+    @include action-button(200px, 34px, $white, $btnBlack, 0);
+    margin-top: 40px;
+  }
+}
+.docs-platform-line2{
+  margin-top: 40px;
+}
+.docs-platform-right{
+  margin-left: 3%;
+}
+@media screen and (max-width: 600px){
+  .docs-platform{
+    margin: 20px 0;
+    width: 100%;
+  }
+}

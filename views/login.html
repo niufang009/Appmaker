@@ -1,0 +1,179 @@
+<% include website/var.html %>
+<% pageName = "login&regist" %>
+<!doctype html>
+<html>
+    <head>
+        <title>登陆——真旺云应用平台</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="<%= relativePath %>/stylesheets/login.css" />
+
+        <% include website/header.html %>
+
+        <div id="loginContent">
+            <i class="clearmid"></i>
+            <div class="mainStyle" style="display:inline-block;">
+                <div class="login-content leftBigImage" >
+                    <i class="clearmid"></i>
+                    <img src="<%= relativePath %>/images/website/login/login-img.png" width="80%" >
+
+                </div>
+                <div class="login-content rightInputs" >
+                    <form id="login" >
+                        <div >
+                            <div class="input-wrapper">
+                                <span >输入您的 E-mail 地址</span>
+                                <div class="h10"></div>
+                                <input name="email" type="email" maxlength="64" autofocus />
+                                <div class="error-promote">
+                                </div>
+                                <!-- <div class="placeholder">邮箱地址：</div> -->
+                            </div>
+                            <div class="h30"></div>
+                            <div class="input-wrapper">
+                                <span>输入密码</span>
+                                <div class="h10"></div>
+                                <input name="passwd" type="password" maxlength="32" />
+                                <div class="error-promote">
+                                </div>
+                                <!-- <div class="placeholder">密码</div> -->
+                            </div>
+                            <div class="h40"></div>
+                            <div class="input-wrapper">
+                                <div class="loginBtn">登陆</div>
+                                <div class="loginBtn-loading">登陆中....</div>
+                                <div style="display: inline-block;float: right;height: 40px;">
+                                    <i class="clearbtm" ></i>
+                                    <div class="checkbox-inline">
+                                        <span id="remember" class="icon unchecked"></span>
+                                        <span>记住我</span>
+                                    </div>
+                                </div>
+                                <div class="error-promote">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="h30"></div>
+                        <img src="<%= relativePath %>/images/website/login/or-line.png" width="100%" >
+                        <div class="h10"></div>
+                        <div >
+                            <div class="input-wrapper" type="submit">
+                                <span >还没有平台账号？</span>
+                                <div class="h10"></div>
+                                <div class="jumpBtn" onclick="javascript:{window.location.hash = '#register' }">点击申请</div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <form id="register" >
+                        <i class="clearmid"></i>
+                        <div id="register-content" style="width:100%">
+                            <div class="register-title">
+                                <i class="clearmid"></i>
+                                <a href="#">
+                                    <img src="<%= relativePath %>/images/website/login/back.png" style="vertical-align:middle" width="52" />
+                                </a>
+                                <div class="divider gray" style="height:50px;margin:0px 12px"></div>
+                                <div class="tips"> 
+                                    <div class="tip-title">账号申请</div>
+                                    <div class="tip-content">
+                                    我们会尽快联系您,提供试用账号</div>  
+                                </div>
+                            </div>
+
+                            <div class="h30"></div>
+                            <div class="input-wrapper">
+                                <span class="labels">您的姓名*</span>
+                                <div class="h10"></div>
+                                <input name="name" type="text" maxlength="20" autofocus />
+                                <div class="error-promote">
+                                </div>
+                            </div>
+                            <div class="h40"></div>
+                            <div class="input-wrapper">
+                                <span class="labels" >您的手机号码*</span>
+                                <div class="input-tips">我们会有专业客服联系并指导您使用该产品</div>
+                                <div class="h10"></div>
+                                <input name="telephone" type="text" maxlength="20" />
+                                <div class="error-promote">
+                                </div>
+                            </div>
+                            <div class="h30"></div>
+
+                            <div class="whichType">
+                                <i class="clearmid"></i>
+                                <div class="grayLine"></div>
+                                <div class="content">您期望运营的产品</div>
+                                <div class="grayLine"></div>
+                            </div>
+
+                            <div class="typeSelector">
+                                <div class="checkbox-inline">
+                                    <span class="icon unchecked"></span>
+                                    <span class="type">电商类</span>
+                                </div>
+                                <div class="checkbox-inline center">
+                                    <span class="icon unchecked"></span>
+                                    <span class="type">社交类</span>
+                                </div>
+                                <div class="checkbox-inline end">
+                                    <span class="icon unchecked"></span>
+                                    <span class="type">服务类</span>
+                                </div>
+                                <div class="h20"></div>
+                                <div class="checkbox-inline">
+                                    <span class="icon unchecked"></span>
+                                    <span class="type">教育类</span>
+                                </div>
+                                <div class="checkbox-inline center">
+                                    <span class="icon unchecked"></span>
+                                    <span class="type">餐饮类</span>
+                                </div>
+                                <div class="checkbox-inline end">
+                                    <span class="icon unchecked"></span>
+                                    <span class="type">其他类</span>
+                                </div>
+                            </div>
+                            <div class="h40"></div>
+                            <div class="input-wrapper bottom" style="text-align:center">
+                                <div class="postBtn">提交申请</div>
+                                <div class="postBtn-loading">提交中....</div>
+                                <div class="error-promote" style="position:static;height:20px">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="mask"></div>
+        <div class="model">
+            <i class="clearmid"></i>
+            <div style="display:inline-block;vertical-align:middle">
+                <div style="color:#fff;display:inline-block;font-weight:bold"> 您的申请我们已经收到，我们会尽快与您联系</div>
+                <div class="h40"></div>
+                <div style="color:#fff;display:inline-block" class="goindexBtn" onclick='javascript:{ window.location.href = "http://" + window.location.host + "/" + window.location.search }'>确定并返回首页</div>
+            </div>
+        </div>
+        <% include website/footer_no_righter.html %>
+        <script src='<%= relativePath %>/javascript/lib/store/dist/store2.min.js'></script>
+        <script src='<%= relativePath %>/javascript/lib/jquery/jquery.validate.min.js'></script>
+        <script src='<%= relativePath %>/javascript/website/login.js'></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

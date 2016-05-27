@@ -1,0 +1,128 @@
+/**
+这个文件中会有些重复声明来增加权重，目的是为了保持contact弹窗的样式在website, console, blog中的统一性
+*/
+@import "_commonimport.scss";
+
+#side-contact-btn{
+	@include action-button(120px, 35px, $white, $bgBlue, 3px);
+	padding: 0 10px;
+	position: fixed;
+	z-index: 9999;
+	right: 12px;
+	bottom: 10px;
+	cursor: pointer;
+	font-size: 14px;
+
+	i{
+		vertical-align: middle;
+		font-size: 30px;
+		margin-right: 5px;
+	}
+}
+#side-contact-article{
+	position: fixed;
+	z-index: 999999;
+	right: 12px;
+	bottom: -500px;
+	padding: 20px 0;
+	width: 300px;
+	border-radius: 5px;
+	box-shadow: rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px;
+	background: $white;
+	font-size: 14px;
+	transition: 0.4s cubic-bezier(.05,.77,.52,1.08);
+	opacity: 0;
+	&.visible{
+		opacity: 1;
+		bottom:5px;
+	}
+	.contact-qq,
+	.contact-tel{
+		padding: 0 20px;
+		font-size: 14px;
+		a{
+			margin-left: 10px;
+		}
+		span{
+			display: inline-block;
+			width: 60px;
+		}
+	}
+	.contact-qq{
+		img{
+			width: 20px;
+			height: 20px;
+			vertical-align: middle;
+		}
+	}
+	.contact-tel{
+		margin-top: 20px;
+		a{
+			font-weight: bold;
+			text-decoration: underline;
+			vertical-align: middle;
+		}
+	}
+	.close{
+		float: right;
+		margin-top: -10px;
+		margin-right: 10px;
+		color: $lightBlack;
+		&:hover{
+			transform: scale(1.2);
+		}
+	}
+	.contact-form{
+		width: 100%;
+	}
+	h3{
+		margin-top: 20px;
+		padding: 15px 0;
+		font-weight: normal;
+		text-align: center;
+		font-size: 18px;
+		font-family: arial, 微软雅黑, 黑体;
+		color: #5d5d5d;
+		line-height: 1.4;
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+	}
+	.field{
+		margin-top: 0;
+	}
+	input, textarea{
+		padding: 5px 20px;
+		width: 100%;
+		max-width: 100%;
+		border: none;
+		border-bottom: 1px solid #eee;
+		border-radius: 0;
+		outline: none;
+		font-size: 12px;
+		background: #F7F9FA;
+		&:focus{
+			border-color: #cfcfcf;
+			background: #fff;
+			color: #444;
+		}
+	}
+	input{
+		height: 40px;
+	}
+	textarea{
+		resize: none;
+		height: 162px;
+		padding-top: 10px;
+	}
+	.message{
+	}
+	.send-msg-btn{
+		@include action-button(100px, 30px, $white, $green);
+		display: block;
+		margin-top: 10px;
+		margin-left: auto;
+		margin-right: auto;
+		font-weight: normal;
+		font-size: 14px;
+	}
+}

@@ -1,0 +1,122 @@
+<% 
+    postLink = 'javascript:{ window.location.href = "https://" + window.location.host + "/website/login#register" + window.location.search }';
+    loginLink = 'javascript:{ window.location.href = "https://" + window.location.host + "/website/login" + window.location.search }';
+%>
+
+    <meta charset="utf-8">
+
+    <meta name="Keywords" content="真旺云,MaxWon,自助App开发,移动App制作平台,App外包开发,手机App软件，快速App开发平台"/>
+    <meta name="Description" content="真旺云是集专业与便捷于一体的App自助生产运营平台，无需App外包开发也能在线制作生成原生手机App，苹果iOS、安卓Android、微信多系统同步生成。随时预览App制作效果，在线移动App开发平台就选真旺云。">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta property="qc:admins" content="215146377565101003636" />
+    <link rel="shortcut icon" href="<%= relativePath %>/images/website/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <script type="text/javascript">
+      var windowbreakpoint = 769;
+      if(window.innerWidth && window.innerWidth < windowbreakpoint){
+        document.getElementsByTagName("html")[0].style.fontSize = Math.pow(window.innerWidth/windowbreakpoint,0.4)*100 +"%";
+      }
+    </script>
+  
+    <% include ../components/checkbrower.html %>
+</head>
+
+<body >
+    <div id="mobile-top">
+        <a href="javascript:void(0)" id="mobile-nav-control" class="hide" ><span class="clearmid"></span><i></i></a>
+        <a class="mobileLogo" href='javascript:{ window.location.href =  "/" + window.location.search }'>
+          <img src="<%= relativePath %>/images/website/mobileLogo.png" />
+        </a>
+        <ul id="mobile-navbar" >
+          <li class="navli ready <%= pageName === "home" ? "active" : "" %>">
+              <a href='javascript:{ window.location.href = "http://" + window.location.host + "/" + window.location.search }'>
+                  首页
+              </a>
+          </li>
+          <li class="navli ready <%= pageName === "product" ? "active" : "" %>">
+              <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/ourproduct" + window.location.search }'>
+                  产品中心
+              </a>
+          </li>
+          <li class="navli ready <%= pageName === "case" ? "active" : "" %>">
+              <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/case" + window.location.search }'>
+                  案例展示
+              </a>
+          </li>
+          <li class="navli ready <%= pageName === "cowork" ? "active" : "" %>">
+              <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/cowork" + window.location.search }'>
+                  渠道合作
+              </a>
+          </li>
+          <li class="navli ready <%= pageName === "aboutus" ? "active" : "" %>">
+              <a href='javascript:{ window.location.href = "http://" + window.location.host +  "/website/aboutus" + window.location.search }'>
+                  关于我们
+              </a>
+          </li>
+          <li class="navli ready <%= pageName === "login&regist" ? "active" : "" %>">
+              <div class="user-control-innerwrapper">
+                  <a class="login" href="<%= loginLink %>">注册</a>
+              </div>
+          </li>
+        </ul>
+    </div>
+
+    <div id="header" class='fixed-top <%= pageName === "home" ? "" : "floating" %>'>
+        <div class="mainStyle">
+            <div id="header-logo" >
+                <a class="WhiteLogo" <%= pageName === "home" ? "" : "style=display:none" %> href='javascript:{ window.location.href =  "/" + window.location.search }'>
+                    <img src="<%= relativePath %>/images/website/logoWhite.png" />
+                </a>
+                <a class="ColorLogo" <%= pageName === "home" ? "style=display:none" : '' %>  href='javascript:{ window.location.href =  "/" + window.location.search }'>
+                    <img src="<%= relativePath %>/images/website/logoBlue.png" />
+                </a>
+            </div>
+            <ul id="navbar" >
+                <li class="navli <%= pageName === "home" ? "active" : "" %>">
+                    <a href='javascript:{ window.location.href = "http://" + window.location.host + "/" + window.location.search }'>
+                        首页
+                    </a>
+                </li>
+                <li class="navli <%= pageName === "product" ? "active" : "" %>">
+                    <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/ourproduct" + window.location.search }'>
+                        产品中心
+                    </a>
+
+                    <div class="dropdown">
+                        <div class="icon-wrapper"><span class="center-icon"></span></div>
+                        <ul>
+                            <li <%= pageName === "a1" ? "class=active" : "" %>><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/a1" + window.location.search }'>电商行业解决方案</a></li>
+                            <li <%= pageName === "a2" ? "class=active" : "" %>><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/a2" + window.location.search }'>社交行业解决方案</a></li>
+                            <li <%= pageName === "a3" ? "class=active" : "" %>><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/a3" + window.location.search }'>服务行业解决方案</a></li>
+                            <li <%= pageName === "a4" ? "class=active" : "" %>><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/a4" + window.location.search }'>教育行业解决方案</a></li>
+                            <li <%= pageName === "a5" ? "class=active" : "" %>><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/a5" + window.location.search }'>餐饮行业解决方案</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="navli <%= pageName === "case" ? "active" : "" %>">
+                    <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/case" + window.location.search }'>
+                        案例展示
+                    </a>
+                </li>
+                <li class="navli <%= pageName === "cowork" ? "active" : "" %>">
+                    <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/cowork" + window.location.search }'>
+                        渠道合作
+                    </a>
+                </li>
+                <li class="navli <%= pageName === "aboutus" ? "active" : "" %>">
+                    <a href='javascript:{ window.location.href = "http://" + window.location.host +  "/website/aboutus" + window.location.search }'>
+                        关于我们
+                    </a>
+                </li>
+                <li class="navli">
+                    <div class="divider"></div>
+                </li>
+                <li class="navli <%= pageName === "login&regist" ? "active" : "" %>">
+                    <div class="user-control-innerwrapper">
+                        <a class="login" href="<%= loginLink %>">登录/注册</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>

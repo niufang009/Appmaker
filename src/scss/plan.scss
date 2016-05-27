@@ -1,0 +1,549 @@
+@import "./website/common/_var.scss";
+@import "./website/common/header.scss";
+@import "./website/common/footer.scss";
+@import "./website/common/_kit.scss";
+@import "./website/common/_reset.scss"; //PC
+@import "./website/common/product_header.scss";
+@media (min-width: $mobile-break-point) {
+    body {
+        background-color: #fff;
+    }
+    .pc-none {
+        display: none;
+    }
+    .content {
+        line-height: 28px;
+        font-size: 16px;
+    }
+    .title {
+        line-height: 50px;
+        font-size: 28px;
+    }
+    .x_title {
+        margin-top: 20px;
+        line-height: 40px;
+        font-size: 18px;
+    }
+    .bgf2 {
+        width: 100%!important;
+        .case_case {
+            background-color: #f2f2f2!important;
+        }
+        .case_edu {
+            background-color: #f2f2f2!important;
+        }
+    }
+    .public_title {
+        padding-top: 180px;
+        text-align: center;
+        color: #fff;
+        h1 {
+            font-size: 36px;
+            font-weight: 100;
+            margin: 10px 0;
+        }
+        h2 {
+            font-size: 36px;
+        }
+        span {
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+    .publeft {
+        float: left;
+        width: 440px;
+    }
+    .pubright {
+        width: 440px;
+        float: right;
+    }
+    .topm {
+        margin-top: 100px;
+    }
+    .electricity {
+        padding-bottom: 50px;
+        .electricitybg {
+            width: 100%;
+            height: 390px;
+            background-image: url("../images/website/bg_electricity.jpg");
+            background-size: cover;
+        }
+        .electricity_contentl {
+            padding-right: 20px;
+            @extend .publeft;
+            .title {
+                font-size: 28px;
+                line-height: 100px;
+                margin-top: 100px;
+            }
+        }
+        .electricity_contentr {
+            @extend .pubright;
+            padding-top: 90px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            center img {
+                width: 300px;
+                margin-bottom: 38px;
+            }
+        }
+    }
+    .social {
+        padding-bottom: 50px;
+        .socialbg {
+            width: 100%;
+            height: 390px;
+            background-image: url("../images/website/bg_social.jpg");
+            background-size: cover;
+        }
+        .social_contentl {
+            padding-right: 20px;
+            @extend .publeft;
+            padding-bottom: 20px;
+            b {
+                font-size: 18px;
+                line-height: 40px;
+                display: block;
+                margin-top: 30px;
+            }
+        }
+        .social_contentr {
+            @extend .pubright;
+            padding-top: 80px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            center img {
+                width: 330px;
+                margin-bottom: 42px;
+            }
+            b {
+                font-size: 18px;
+                line-height: 40px;
+                display: block;
+                margin-top: 100px;
+            }
+        }
+        .social_mid {
+            span {
+                font-size: 28px;
+                line-height: 80px;
+            }
+        }
+        .social_bot {
+            div {
+                width: 450px;
+                float: left;
+                &:nth-child(2n) {
+                    float: right;
+                }
+                div {
+                    line-height: 30px;
+                }
+                b {
+                    font-size: 18px;
+                    line-height: 40px;
+                    display: block;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+    .service {
+        padding-bottom: 50px;
+        .servicebg {
+            width: 100%;
+            height: 390px;
+            background-image: url("../images/website/bg_service.jpg");
+            background-size: cover;
+        }
+        .service_contentl {
+            @extend .publeft;
+            @extend .topm;
+            b {
+                font-size: 18px;
+                line-height: 40px;
+                display: block;
+                margin-top: 30px;
+            }
+            .title {
+                line-height: 50px;
+                font-size: 24px;
+            }
+        }
+        .service_contentr {
+            @extend .pubright;
+            center img {
+                width: 290px;
+                margin-top: 50px;
+                margin-bottom: 60px;
+            }
+            .title {
+                height: 52px;
+            }
+            b {
+                font-size: 18px;
+                line-height: 40px;
+                display: block;
+                margin-top: 30px;
+            }
+        }
+    }
+    .education {
+        padding-bottom: 50px;
+        .educationbg {
+            width: 100%;
+            height: 390px;
+            background-image: url("../images/website/bg_education.jpg");
+            background-size: cover;
+        }
+        .education_contentl {
+            @extend .publeft;
+            @extend .topm;
+            width: 490px!important;
+            b {
+                font-size: 18px;
+                line-height: 40px;
+                display: block;
+                margin-top: 30px;
+            }
+            .title {
+                line-height: 50px;
+                font-size: 24px;
+            }
+        }
+        .education_contentr {
+            @extend .pubright;
+            width: 440px!important;
+            center img {
+                width: 310px;
+                margin-top: 70px;
+                margin-bottom: 90px;
+            }
+            .title {
+                height: 50px;
+            }
+            b {
+                font-size: 18px;
+                line-height: 40px;
+                display: block;
+                margin-top: 30px;
+            }
+        }
+    }
+    .catering {
+        padding-bottom: 50px;
+        .cateringbg {
+            width: 100%;
+            height: 390px;
+            background-image: url("../images/website/bg_catering.jpg");
+            background-size: cover;
+        }
+        .catering_contentl {
+            @extend .publeft;
+            @extend .topm;
+            b {
+                font-size: 18px;
+                line-height: 40px;
+                display: block;
+                margin-top: 30px;
+            }
+            .title {
+                line-height: 50px;
+                font-size: 24px;
+            }
+        }
+        .catering_contentr {
+            @extend .pubright;
+            width: 480px!important;
+            center img {
+                width: 290px;
+                margin-top: 50px;
+                margin-bottom: 48px;
+            }
+            .title {
+                height: 50px;
+            }
+            b {
+                font-size: 18px;
+                line-height: 40px;
+                display: block;
+                margin-top: 30px;
+            }
+        }
+    }
+    #aboutus {}
+}
+//mobile
+@media (max-width: $mobile-break-point - 1) {
+    .mobile-none {
+        display: none;
+    }
+    .content {
+        font-size: 1rem;
+        line-height: 1.6rem;
+        margin-top: 3px;
+        padding: 0 5%;
+        font-weight: 100;
+    }
+    .x_title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: 0 5%;
+        margin-top: 20px;
+    }
+    .clear-margin {
+        margin-top: 0;
+    }
+    .bgf2 {
+        background-color: #efefef;
+    }
+    .content-both1 {
+        img {
+            display: inline-block;
+            float: right;
+            width: 45%;
+            margin-bottom: 15px;
+        }
+    }
+    .electricity {
+        .electricitybg {
+            width: 100%;
+            height: 227px;
+            background-image: url("../images/website/product/product_a1.jpg");
+            background-size: cover;
+            & > div {
+                padding-top: 75px;
+                text-align: center;
+                color: #fff;
+                h2 {
+                    font-size: 1.8rem;
+                }
+                h1 {
+                    font-size: 2rem;
+                    font-weight: 100;
+                }
+            }
+        }
+        .electricity_content {
+            padding: 35px 0;
+            .title {
+                font-size: 1.3rem;
+                font-weight: 600;
+                padding: 0 5%;
+                line-height: 24px;
+            }
+//          .content-both {
+//              display: flex;
+//              display: -webkit-flex ;
+//              justify-content: center;
+//              align-items: flex-start;
+//              div {
+//                  width: 55%;
+//                  margin-top: 5%;
+//              }
+//              img {
+//                  width: 45%;
+//                  height: 45%;
+//                  margin-top: -15%;
+//              }
+//          }
+        }
+    }
+    .social {
+        .socialbg {
+            width: 100%;
+            height: 227px;
+            background-image: url("../images/website/product/product_a2.jpg");
+            background-size: cover;
+            & > div {
+                padding-top: 75px;
+                text-align: center;
+                color: #fff;
+                h2 {
+                    font-size: 1.8rem;
+                }
+                h1 {
+                    font-size: 2rem;
+                    font-weight: 100;
+                }
+            }
+        }
+        .social_content {
+            padding: 35px 0;
+            .title {
+                font-size: 1.3rem;
+                font-weight: 600;
+                padding: 0 5%;
+                line-height: 24px;
+                margin-top: 30px;
+                display: flex;
+                align-items: center;      
+            }
+
+            b {
+                font-size: 1.1rem;
+                padding: 0 5%;
+                display: block;
+                margin-bottom: 0px;
+                margin-top: 20px !important;
+            }
+            .social_mid {
+                .title {
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    padding: 0 5%;
+                    line-height: 24px;
+                    display: flex;
+                    margin-top: 30px;
+                }
+                .content {
+                    padding: 0;
+                    font-size: 1rem;
+                    line-height: 22px;
+                    font-weight: 100;
+                }
+            }
+            .social_bot {
+                b {
+                    font-size: 1.1rem;
+                    padding: 0 5%;
+                    display: block;
+                    margin-top: 20px !important;
+                }
+                > div > div {
+                    padding: 0;
+                    font-size: 1rem;
+                    line-height: 22px;
+                    font-weight: 100;
+                    padding: 0 5%;
+                    margin-top: 3px;
+                }
+            }
+        }
+    }
+    .service {
+        .servicebg {
+            width: 100%;
+            height: 227px;
+            background-image: url("../images/website/product/product_a3.jpg");
+            background-size: cover;
+            & > div {
+                padding-top: 70px;
+                text-align: center;
+                color: #fff;
+                h2 {
+                    font-size: 1.8rem;
+                }
+                h1 {
+                    font-size: 2rem;
+                    font-weight: 100;
+                }
+                span {
+                    font-size: 1.3rem;
+                    font-weight: 100;
+                }
+            }
+        }
+        .service_content {
+            padding: 35px 0;
+            .title {
+                font-size: 1.3rem;
+                font-weight: 600;
+                padding: 0 5%;
+                line-height: 24px;
+                margin-top: 30px;
+            }
+            b {
+                font-size: 1.1rem;
+                padding: 0 5%;
+                display: block;
+                margin-top: 20px !important;
+            }
+            
+        }
+    }
+    .education {
+        .educationbg {
+            width: 100%;
+            height: 227px;
+            background-image: url("../images/website/product/product_a4.jpg");
+            background-size: cover;
+            & > div {
+                padding-top: 70px;
+                text-align: center;
+                color: #fff;
+                h2 {
+                    font-size: 1.8rem;
+                }
+                h1 {
+                    font-size: 2rem;
+                    font-weight: 100;
+                }
+                span {
+                    font-size: 1.3rem;
+                    font-weight: 100;
+                }
+            }
+        }
+        .education_content {
+            padding: 35px 0;
+            .title {
+                font-size: 1.2rem;
+                font-weight: 600;
+                padding: 0 5%;
+                line-height: 24px;
+                margin-top: 30px;
+            }
+            b {
+                font-size: 1.1rem;
+                padding: 0 5%;
+                display: block;
+                margin-top: 20px !important;
+            }
+           
+        }
+    }
+    .catering {
+        .cateringbg {
+            width: 100%;
+            height: 227px;
+            background-image: url("../images/website/product/product_a5.jpg");
+            background-size: cover;
+            & > div {
+                padding-top: 70px;
+                text-align: center;
+                color: #fff;
+                h2 {
+                    font-size: 1.8rem;
+                }
+                h1 {
+                    font-size: 2rem;
+                    font-weight: 100;
+                }
+                span {
+                    font-size: 1.3rem;
+                    font-weight: 100;
+                }
+            }
+        }
+        .catering_content {
+            padding: 35px 0;
+            .title {
+                font-size: 1.3rem;
+                font-weight: 600;
+                padding: 0 5%;
+                line-height: 24px;
+                margin-top: 30px;
+            }
+            b {
+                font-size: 1.1rem;
+                padding: 0 5%;
+                display: block;
+                margin-top: 20px !important;
+            }
+            
+        }
+    }
+    #aboutus {}
+}

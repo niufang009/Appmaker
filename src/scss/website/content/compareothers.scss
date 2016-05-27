@@ -1,0 +1,215 @@
+.slide-compareothers {
+  .right{
+    float: right;
+  }
+  .left{
+    float: left;
+  }
+  .compare-details {
+    float: left;
+    width: 70%;
+    height: 100%;
+    background: #0668ee;
+    .compare-indexs {
+      @extend .vertical-middle;
+      margin: 0 auto;
+      width: 80%;
+      height: 480px;
+    }
+    .compare-titles {
+      margin-bottom: 90px;
+      height:40px;
+      .traditional,.our{
+        display: inline-block;
+        width: 45%;
+        color:#fff;
+        font-size: 36px;
+      }
+    }
+    .compare-item {
+      clear: both;
+      height:100px;
+      .traditional,.our{
+        float: left;
+        position: relative;
+        background: #6aa4f5;
+        border-radius: 20px;
+        width: 45%;
+        height: 28px;
+      }
+      .our{
+        float: right;
+      }
+      .icon-upline{
+
+      }
+
+      .traditional-inner,.our-inner{
+        position: absolute;
+        width: 0;
+        height: 100%;
+        content: attr(width);
+        transition: width 1.5s;
+        border-radius: 20px;
+      }
+      .traditional-inner{
+        right: 0;
+      }
+      .our-inner{
+        left: 0;
+      }
+      .index-tip{
+        opacity: 0;
+        position: absolute;
+        display: inline-block;
+        width:80px;
+        top:-45px;
+        left: 100%;
+        font-size:20px;
+        color:#fff;
+      }
+      i{
+        display: inline-block;
+        margin:0 auto;
+        position: relative;
+        top:-11px;
+        width:55px;
+        height: 52px;
+        background-color:transparent;
+      }
+      .icon-time{
+        background:url("/images/website/icon_time.png") no-repeat center center;
+      }
+      .icon-money{
+        background:url("/images/website/icon_money.png") no-repeat center center;
+      }
+      .icon-user{
+        background:url("/images/website/icon_user.png") no-repeat center center;
+      }
+      .icon-tool{
+        background:url("/images/website/icon_tool.png") no-repeat center center;
+      }
+    }
+    @mixin  increase-percent($lightColor:#e5cc19,$darkColor:#ff6f02){
+      .traditional-inner{
+        background: linear-gradient(to right,$lightColor,$darkColor);
+      }
+      .our-inner{
+        background: linear-gradient(to right,$darkColor,$lightColor);
+      }
+    }
+
+    .compare-upline{
+      $dark:#ff6f02;
+      $light:#e5cc19;
+      @include  increase-percent($light,$dark);
+    }
+    .compare-budget{
+      $dark:#efd705;
+      $light:#b8d83e;
+      @include  increase-percent($light,$dark);
+    }
+    .compare-teamsimple{
+      $dark:#53d504;
+      $light:#60ff00;
+      @include  increase-percent($light,$dark);
+    }
+    .compare-skill{
+      $dark:#13cee9;
+      $light:#00fff6;
+      @include  increase-percent($light,$dark);
+    }
+
+
+    &.active{
+      .compare-item .traditional-inner,.compare-item .our-inner{
+        .index-tip{
+          opacity: 1;
+          //display: inline-block;
+        }
+        width: 100%;
+        &:before{
+          content:'';
+          left:12px;
+          position:absolute;
+          top:-19px;
+          border:13px solid transparent;
+          border-top-color: #fff;
+          transform: rotateY(62deg);
+          //background: url("/images/website/");
+        }
+        &:after{
+          left:0;
+          position:absolute;
+          top:-42px;
+          content:"100%";
+          color:#fff;
+          min-width: 40px;
+          text-align: right;
+        }
+      }
+      .compare-item .our-inner{
+        &:before{
+          left:initial;
+          right:6px;
+        }
+        &:after{
+          left:initial;
+          right:6px;
+        }
+      }
+      .compare-upline .our-inner{
+        width:15%;
+        &:after{
+          content:"5%";
+        }
+        .index-tip{
+        }
+      }
+      .compare-budget .our-inner{
+        width: 30%;
+        &:after{
+          content:"30%";
+        }
+        &:before{
+          right:11px;
+        }
+      }
+      .compare-teamsimple .our-inner{
+        width: 50%;
+        &:after{
+          content:"50%";
+        }
+
+        &:before{
+          right:13px;
+        }
+      }
+      .compare-skill .our-inner{
+        width: 10%;
+        &:after{
+          content:"2%"
+        }
+      }
+    }
+  }
+
+  .your-start {
+    float: right;
+    width: 30%;
+    height: 100%;
+    background: #168fff;
+    &:before{
+      display: block;
+      content: "";
+    }
+    h2, h3, .button {
+      color: #fff;
+    }
+    h3 {
+      margin-top: 10px;
+      margin-bottom: 40px;
+      font-weight: normal;
+    }
+  }
+}

@@ -1,0 +1,695 @@
+
+
+
+<!doctype html>
+<html>
+    <head>
+        <title>真旺云应用平台_全网营销_App开发手机App软件移动App制作平台</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="./stylesheets/index.css?v=1464229120636" type="text/css" />
+        <link rel="stylesheet" href="./stylesheets/case.css?v=1464229120636" type="text/css" />
+
+        
+
+    <meta charset="utf-8">
+
+    <meta name="Keywords" content="真旺云,MaxWon,自助App开发,移动App制作平台,App外包开发,手机App软件，快速App开发平台"/>
+    <meta name="Description" content="真旺云是集专业与便捷于一体的App自助生产运营平台，无需App外包开发也能在线制作生成原生手机App，苹果iOS、安卓Android、微信多系统同步生成。随时预览App制作效果，在线移动App开发平台就选真旺云。">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta property="qc:admins" content="215146377565101003636" />
+    <link rel="shortcut icon" href="./images/website/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <script type="text/javascript">
+      var windowbreakpoint = 769;
+      if(window.innerWidth && window.innerWidth < windowbreakpoint){
+        document.getElementsByTagName("html")[0].style.fontSize = Math.pow(window.innerWidth/windowbreakpoint,0.4)*100 +"%";
+      }
+    </script>
+  
+    <script type="text/javascript">
+    function checkBrowser(v) {
+        var userAgent = navigator.userAgent.toLowerCase(), low = false;
+        if (isChromium(userAgent)) {
+            low = chromium(userAgent, v.GG);
+        } else if (isWebkit(userAgent)) {
+            low = Safari(userAgent, v.Safari);
+        } else if (isFireFox(userAgent)) {
+            low = FireFox(userAgent, v.FF)
+        } else if (isIE) {
+            low = IE(v.IE)
+        } else {
+            low = true;
+        }
+        checkjump(low)
+    }
+
+    function checkjump(low) {
+        if(low) window.location.href = "/outdatedbrowser" + window.location.search + "?version=001";
+    }
+
+    function Safari(userAgent, v) {
+        var version = userAgent.match(/version\/([\d.]+)/)[1];
+        return parseInt(version) < v;
+    }
+
+    function FireFox(userAgent, v) {
+        var version = userAgent.match(/firefox\/([\d.]+)/)[1];
+        return parseInt(version) < v;
+    }
+
+    function chromium(userAgent, v) {
+        var version = userAgent.match(/chrome\/([\d.]+)/)[1];
+        var versionNum = version.split(".")[0];
+        return parseInt(versionNum) < v;
+    }
+
+    function IE(v) {
+        var version = 999999;
+        if (navigator.appName == 'Microsoft Internet Explorer') {
+            new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent);
+            version = parseInt(RegExp.$1);
+        } else if ("ActiveXObject" in window) {
+            version = 11;
+        }
+        return parseInt(version) < v;
+    };
+// 判断是否为chrome内核浏览器
+    function isChromium(userAgent) {
+        var chromium = "mozilla/&&applewebkit/&&chrome/&&safari/".split("&&");
+        for (var i = 0; i < chromium.length; i++)
+            if (userAgent.indexOf(chromium[i]) < 0)
+                return false;
+        return true;
+    }
+
+    // 判断是否为webkit内核浏览器
+    function isWebkit(userAgent) {
+        if (userAgent.indexOf("applewebkit/") < 0)
+            return false;
+        return true;
+    }
+
+    function isFireFox(userAgent) {
+        if (userAgent.indexOf("firefox/") < 0)
+            return false;
+        return true;
+    }
+
+    function isIE(userAgent) {
+        if ((navigator.userAgent.indexOf('MSIE') >= 0) && (navigator.userAgent.indexOf('Opera') < 0))
+            return true;
+        return false;
+    }
+
+    //检查浏览器
+    checkBrowser({IE: 9, FF: 30, GG: 20, Safari: 4});
+
+    // //隐身模式判断
+    // try {
+    //     window.localStorage.setItem('testkey', '');
+    // } catch (error) {
+    //     if (window.locale === 'zh') {
+    //         alert("请关闭隐身模式");
+    //     } else {
+    //         alert("Please exit private mode");
+    //     }
+    // }
+
+</script>
+</head>
+
+<body >
+    <div id="mobile-top">
+        <a href="javascript:void(0)" id="mobile-nav-control" class="hide" ><span class="clearmid"></span><i></i></a>
+        <a class="mobileLogo" href='javascript:{ window.location.href =  "/" + window.location.search }'>
+          <img src="./images/website/mobileLogo.png" />
+        </a>
+        <ul id="mobile-navbar" >
+          <li class="navli ready active">
+              <a href='javascript:{ window.location.href = "http://" + window.location.host + "/" + window.location.search }'>
+                  首页
+              </a>
+          </li>
+          <li class="navli ready ">
+              <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/ourproduct" + window.location.search }'>
+                  产品中心
+              </a>
+          </li>
+          <li class="navli ready ">
+              <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/case" + window.location.search }'>
+                  案例展示
+              </a>
+          </li>
+          <li class="navli ready ">
+              <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/cowork" + window.location.search }'>
+                  渠道合作
+              </a>
+          </li>
+          <li class="navli ready ">
+              <a href='javascript:{ window.location.href = "http://" + window.location.host +  "/website/aboutus" + window.location.search }'>
+                  关于我们
+              </a>
+          </li>
+          <li class="navli ready ">
+              <div class="user-control-innerwrapper">
+                  <a class="login" href="javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login&#34; + window.location.search }">注册</a>
+              </div>
+          </li>
+        </ul>
+    </div>
+
+    <div id="header" class='fixed-top '>
+        <div class="mainStyle">
+            <div id="header-logo" >
+                <a class="WhiteLogo"  href='javascript:{ window.location.href =  "/" + window.location.search }'>
+                    <img src="./images/website/logoWhite.png" />
+                </a>
+                <a class="ColorLogo" style=display:none  href='javascript:{ window.location.href =  "/" + window.location.search }'>
+                    <img src="./images/website/logoBlue.png" />
+                </a>
+            </div>
+            <ul id="navbar" >
+                <li class="navli active">
+                    <a href='javascript:{ window.location.href = "http://" + window.location.host + "/" + window.location.search }'>
+                        首页
+                    </a>
+                </li>
+                <li class="navli ">
+                    <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/ourproduct" + window.location.search }'>
+                        产品中心
+                    </a>
+
+                    <div class="dropdown">
+                        <div class="icon-wrapper"><span class="center-icon"></span></div>
+                        <ul>
+                            <li ><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/a1" + window.location.search }'>电商行业解决方案</a></li>
+                            <li ><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/a2" + window.location.search }'>社交行业解决方案</a></li>
+                            <li ><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/a3" + window.location.search }'>服务行业解决方案</a></li>
+                            <li ><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/a4" + window.location.search }'>教育行业解决方案</a></li>
+                            <li ><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/a5" + window.location.search }'>餐饮行业解决方案</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="navli ">
+                    <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/case" + window.location.search }'>
+                        案例展示
+                    </a>
+                </li>
+                <li class="navli ">
+                    <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/cowork" + window.location.search }'>
+                        渠道合作
+                    </a>
+                </li>
+                <li class="navli ">
+                    <a href='javascript:{ window.location.href = "http://" + window.location.host +  "/website/aboutus" + window.location.search }'>
+                        关于我们
+                    </a>
+                </li>
+                <li class="navli">
+                    <div class="divider"></div>
+                </li>
+                <li class="navli ">
+                    <div class="user-control-innerwrapper">
+                        <a class="login" href="javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login&#34; + window.location.search }">登录/注册</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+        <div style="position:relative">
+            <div id="landing-image">
+                <i class="clearmid"></i>
+                <video width="100%" oncanplay="document.getElementById('landing-image').style.background = '#000' " data-src="./images/website/intro-new.webm" autoplay loop ></video>
+                <div class="mask" style="display:none"></div>
+            </div>
+        </div>
+
+        <div id="index" class="mainStyle" >
+            <div class="landing" >
+                <i class="clearmid"></i>
+                <div class="tips">
+                    <p class="title">帮助企业构建与移动互联网用户的</p>
+                    <p class="main-title">零距离营销平台</p>
+                    <p class="explain">让完全不懂技术的个人或企业通过简单的配置操作生成 App + 微信商城 + 手机网站 + PC网站<br>打通淘宝、京东等平台，一站式管理全网营销</p>
+                    <div class="gobtn-wrapper">
+                        <div class="gobtn" onclick="javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login&#34; + window.location.search }" >
+                            <i class="clearmid"></i>
+                            <div >免费体验</div>
+                            <img  src="./images/website/index/start.png" width="30" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="basicInfo">
+                <div class="clearTop h60"></div>
+                <div class="left w430" >
+                    <div class="appcube wechat"><img src="./images/website/index/wechat.png" / ></div>
+                    <div class="appcube appstore"><img src="./images/website/index/appstore.png" / ></div>
+                    <div class="appcube"></div>
+                    <div class="appcube "></div>
+                    <div class="appcube apk"><img src="./images/website/index/apk.png" / ></div>
+                    <div class="appcube apple"><img src="./images/website/index/apple.png" / ></div>
+                    <div class="appcube code"><img src="./images/website/index/win.png" / ></div>
+                    <div class="appcube pad"><img src="./images/website/index/pad.png" / ></div>
+                    <div class="appcube"></div>
+                </div>
+                <div class="right w500" >
+                    <div class="title-1-wrapper">
+                        <div class="grayLine"></div>
+                        <h class="title-1">真旺云能做什么 ？</h>
+                        <div class="grayLine"></div>
+                        <div class="title-1-3"></div>
+                    </div>
+
+                    <div class="title-2">
+                        <h>在全网环境中，我们可以为您：</h>
+                    </div>
+                    <img class="icons" src="./images/website/index/icons.png" />
+                    <ul class="dowhat" >
+                        <li >
+                            <div class="dot floating"></div>
+                            <div class="title-3">全网多渠道营销</div>
+                            <div class="title-3-2">同时在App，微信商城，手机网站，PC网站和淘宝，京东等平台展开营销，让您业绩倍增。</div>
+                        </li>
+                        <li >
+                            <div class="dot floating"></div>
+                            <div class="title-3">高效用户运营，节省流量成本</div>
+                            <div class="title-3-2">通过积分，社区运营和客户关系管理等方式长期留存用户，形成持续消费，不断降低用户获取成本。</div>
+                        </li>
+                        <li >
+                            <div class="dot floating"></div>
+                            <div class="title-3">全网融合推广</div>
+                            <div class="title-3-2">传统SEO结合微信、直达号和App营销推广，最快增长业绩。</div>
+                        </li>
+                        <li >
+                            <div class="dot floating"></div>
+                            <div class="title-3">粉丝运营与互动</div>
+                            <div class="title-3-2">多样吸粉，飞速增长流量，一元夺宝、优惠券等活动快速拉动营收。</div>
+                        </li>
+                        <li >
+                            <div class="dot floating"></div>
+                            <div class="title-3">大数据分析</div>
+                            <div class="title-3-2">全面洞悉客户消费行为，实时用户画像，精准掌握销售转化。</div>
+                        </li>
+                        <li >
+                            <div class="dot floating"></div>
+                            <div class="title-3">一站式管理，最小运营成本</div>
+                            <div class="title-3-2">统一后台同时管理多端营销，最小人员配置，最大运营效率。</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+                <div class="clearTop h60"></div>
+                <div class="baseline w490">
+                    <div class="title-1-wrapper">
+                        <div class="grayLine"></div>
+                        <h class="title-1">全网营销行业解决方案</h>
+                        <div class="grayLine"></div>
+                        <div class="title-1-3"></div>
+                    </div>
+                    <div class="title-2 floating">
+                        <h>电商品牌如何实现全网营销 ？</h>
+                    </div>
+                    <div class="paragraph">2015年移动电商已经占据销售额的大头，同时，微商、跨境电商、社交电商、社区电商、网红电商等模式不断出现并得到快速发展。电商品牌需要积极尝试新的模式和先进的技术，才能在竞争中致胜。</div>
+                    <div class="paragraph"><div class="mobile-pic-decoration"><img class="mobile-lazy" data-src="./images/website/index/phoneShopS.png" style="float:right;" /></div>微信服务号是电商品牌获取和运营粉丝的一个高效渠道，通过做好内容运营和各种互动营销，电商品牌可以在微信服务号上留存大量粉丝，再通过广告、微商城等合适的销售转化方式，电商品牌可以获得很好的销售收入。手机App比微信服务号有更好的交互体验，通过信息流、论坛、聊天、信息推送、一元夺宝等富媒体互动可以增加客户的黏性和忠诚度，最终实现在与会员的互动中达到营销的目的。</div>
+                    <div class="paragraph">真旺云平台能够帮助电商品牌在淘宝、天猫、京东等平台外建立起有效的营销渠道，提供专业的一站式运营后台，对用户行为和消费趋势进行大数据分析，帮助电商把运营从单纯的流量运营转变成流量、客户、社交、内容等融合的高效运营。</div>
+                    <div class="clearfix"></div>
+                    <div class="special" >
+                        <div class="special-title" style=""><span>特色功能</span><div class="grayLine"></div></div>
+                        <div class="icon-wrapper"><img src="./images/website/index/san.png" class="special-icon push" /><p>三级分销</p></div>
+                        <div class="icon-wrapper"><img src="./images/website/index/rmb.png" class="special-icon gamble" /><p>一元夺宝</p></div>
+                        <div class="icon-wrapper"><img src="./images/website/index/support.png" class="special-icon suppot" /><p>在线客服</p></div>
+                        <div class="icon-wrapper"><img src="./images/website/index/bbs.png" class="special-icon bbs" /><p>APP内部论坛</p></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                <div class="baseline w480 phoneShop" style="text-align:right">
+                    <img class="pc-lazy" data-src="./images/website/index/phoneShop.png" />
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearTop h60"></div>
+            <div id="moreSolution" >
+                <div class="grayLine"></div>
+                <div class="content" >
+                    <div class="title-1">更多行业解决方案</div>
+                    <div class="title-1-4"></div>
+                </div>
+                <div class="grayLine"></div>
+            </div>
+            <div class="solutionLinks" >
+                <div class="link"><a href='javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login#register&#34; + window.location.search }'>电商行业</a></div><div class="divider gray"></div>
+                <div class="link"><a href='javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login#register&#34; + window.location.search }'>社交行业</a></div><div class="divider gray"></div>
+                <div class="link"><a href='javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login#register&#34; + window.location.search }'>服务行业</a></div><div class="divider gray"></div>
+                <div class="link"><a href='javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login#register&#34; + window.location.search }'>教育行业</a></div><div class="divider gray desk-show"></div><i></i>
+                <div class="link"><a href='javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login#register&#34; + window.location.search }'>医疗行业</a></div><div class="divider gray"></div>
+                <div class="link"><a href='javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login#register&#34; + window.location.search }'>餐饮行业</a></div><div class="divider gray"></div>
+                <div class="link"><a href='javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login#register&#34; + window.location.search }'>汽车行业</a></div><div class="divider gray"></div>
+                <div class="link"><a href='javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login#register&#34; + window.location.search }'>美容行业</a></div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="clearTop h30"></div>
+            <div class="moreSlution" onclick="javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login#register&#34; + window.location.search }">更多行业方案请注册获取</div>
+
+        </div>
+        <div class="clearTop h90"></div>
+        <div id="cases-swiper" >
+            <div class="cases-wrapper" >
+                <div class="swiper-list mainStyle" >
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" >
+                                <div class="case_width case_demo case_fl">
+    <div class="mainStyle">
+        <div class="case_demowidth">
+            <div class="case_title">
+                <div class="mobile-tborder"></div>
+                <div>电商案例</div>
+                <div class="mobile-tborder"></div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="case_img">
+                <center>
+                    <img src="./images/website/case/demologo.png">
+                    <img src="./images/website/case/demoer.png">
+                </center>
+                <div>一元云购</div>
+            </div>
+            <div class="case_content">
+                1元云购商城是一种全新的购物方式,最潮流的数码产品，生活用品，低价尝试，惊喜回报，是娱乐、购物一体化的一个全新的购物平台。1元就有机会买到小米手机。
+            </div>
+        </div>
+        <div class="case_demoimg mobile-none">
+            <i class="clearmid"></i>
+            <img data-src="./images/website/case/A1.png" style="width: 190px;vertical-align: middle;">
+            <img data-src="./images/website/case/A2.png" style="width: 157px;vertical-align: middle;">
+            <img data-src="./images/website/case/A3.png" style="width: 157px;vertical-align: middle;">
+        </div>
+        <div class="case_demoimg pcimg-none">
+            <i class="clearmid"></i>
+            <center>
+            <img data-src="./images/website/case/A1.png" style="width: 36%;vertical-align: middle;">
+            <img data-src="./images/website/case/A2.png" style="width: 32%;vertical-align: middle;">
+            </center>
+        </div>
+    </div>
+</div>
+                            </div>
+                            <div class="swiper-slide  ">
+                                <div class="case_width case_case case_fl">
+    <div class="mainStyle">
+        <div class="case_caseimgleft mobile-none">
+            <i class="clearmid"></i>
+            <img data-src="./images/website/case/B1.png" style="width: 157px;vertical-align: middle;">
+            <img data-src="./images/website/case/B2.png" style="width: 157px;vertical-align: middle;">
+            <img data-src="./images/website/case/B3.png" style="width: 190px;vertical-align: middle;">
+        </div>
+        
+        <div class="case_casewidthright">
+            <div class="case_title">
+                <div class="mobile-tborder"></div>
+                <div>社交案例</div>
+                <div class="mobile-tborder"></div>
+            </div>
+            <div class="case_img">
+                <center>
+                    <img src="./images/website/case/soclogo.png">
+                <img src="./images/website/case/socer.png">
+                </center>
+                <div>闻闻窝宠物</div>
+            </div>
+            <div class="case_content">
+               如果你喜欢狗，爱狗，养狗，想养狗，想了解狗，那么你的手机里都应该安装一个《狗狗大全》，这里有完备的狗狗信息、狗狗萌图、狗狗周边商家信息，还有专业的医生、训练师、营养师及造型师解答您爱狗的问题，更有很多养狗人士在里面互动，《狗狗大全》你值得拥有。
+            </div>
+        </div>
+        
+        <div class="case_caseimgleft pcimg-none">
+            <i class="clearmid"></i>
+            <center>
+            <img data-src="./images/website/case/B3.png" style="width: 36%;vertical-align: middle;">
+            <img data-src="./images/website/case/B2.png" style="width: 32%;vertical-align: middle;">
+            </center>
+        </div>
+        
+    </div>
+</div>
+                            </div>
+                            <div class="swiper-slide  " style="display:none">
+                                            <div class="case_width case_service case_fl">
+                <div class="mainStyle">
+                    <div class="case_servicewidth">
+                        <div class="case_title">
+                            <div class="mobile-tborder"></div>
+                            <div>服务业案例</div>
+                            <div class="mobile-tborder"></div>
+                        </div>
+                        <div class="case_img">
+                            <center>
+                                <img src="./images/website/case/serlogo.png">
+                                <img src="./images/website/case/serer.png">
+                            </center>
+                            <div>德奈福</div>
+                        </div>
+                        <div class="case_content">
+
+                            行业唯一一家洗衣App可实现商户入住的平台；行业唯一一家可实现App与微信商城两网打通企业；支持更丰富的交互设计，更好的用户体验；预约下单洗衣，随时随地，互联互通。
+                        </div>
+                    </div>
+                    <div class="case_serviceimg mobile-none">
+                        <img data-src="./images/website/case/C1.png" style="width: 190px;vertical-align: middle;">
+                        <img data-src="./images/website/case/C2.png" style="width: 157px;vertical-align: middle;">
+                        <img data-src="./images/website/case/C3.png" style="width: 157px;vertical-align: middle;">
+                    </div>
+                    
+                    <div class="case_serviceimg pcimg-none">
+                        <center>
+                            <img data-src="./images/website/case/C1.png" style="width: 36%;vertical-align: middle;">
+                            <img data-src="./images/website/case/C2.png" style="width: 32%;vertical-align: middle;">
+                        </center>
+                    </div>
+                </div>
+            </div>
+                            </div>
+                            <div class="swiper-slide  ">
+                                            <div class="case_width case_edu case_fl">
+                <div class="mainStyle">
+                    <div class="case_eduimgleft mobile-none">
+                        <i class="clearmid"></i>
+                        <img data-src="./images/website/case/D1.png" style="width: 190px;vertical-align: middle;">
+                        <img data-src="./images/website/case/D2.png" style="width: 195px;vertical-align: middle;">
+                    </div>
+                    <div class="case_eduwidthright">
+                        <div class="case_title">
+                            <div class="mobile-tborder"></div>
+                            <div>教育案例</div>
+                            <div class="mobile-tborder"></div>
+                        </div>
+                        <div class="case_img">
+                            <center>
+                                <img src="./images/website/case/edulogo.png">
+                                <img src="./images/website/case/eduer.png">
+                            </center>
+                            <div>东奥题库宝典</div>
+                        </div>
+                        <div class="case_content">
+                            东奥题库宝典是东奥会计在线倾力为学员打造的一款会计练习题App。东奥会计在线凭借业内名师、17年经久不衰的“轻松过关系列”辅导书和精品课程，全程为学员提供一站式会计学习服务。本题库App在继承历年教学内容精华的基础上，针对不断变化的移动学习场景和学习阶段而研发，方便学习，轻松过关取证。
+                        </div>
+                    </div>
+                    <div class="case_eduimgleft pcimg-none">
+                        <i class="clearmid"></i>
+                        <center>
+                            <img data-src="./images/website/case/D2.png" style="width: 36%;vertical-align: middle;">
+                            <img data-src="./images/website/case/D1.png" style="width: 32%;vertical-align: middle;">
+                        
+                        </center>
+                    </div>
+                </div>
+            </div>
+                            </div>
+                            <div class="swiper-slide  ">
+                                    <div class="case_width case_cat case_fl">
+        <div class="mainStyle">
+            <div class="case_catwidth">
+                <div class="case_title">
+                    <div class="mobile-tborder"></div>
+                    <div>餐饮案例</div>
+                    <div class="mobile-tborder"></div>
+                </div>
+                <div class="case_img">
+                    <center>
+                        <img src="./images/website/case/catlogo.png">
+                        <img src="./images/website/case/cater.png">
+                    </center>
+                    <div>饭来了</div>
+                </div>
+                <div class="case_content">
+                    饭来了专注于校园食堂的订餐服务平台。通过饭来了，学生能够实现一键订餐，极速送餐上楼，而且是私人定制的升级版食堂便当 。同时我们还能提供个性化的早餐定制，解决学生早餐需求。
+                </div>
+            </div>
+            <div class="case_catimg mobile-none">
+                <i class="clearmid"></i>
+                <img data-src="./images/website/case/E1.png" style="width: 190px;vertical-align: middle;">
+                <img data-src="./images/website/case/E2.png" style="width: 168px;vertical-align: middle;">
+            </div>
+            
+            <div class="case_catimg pcimg-none">
+                <i class="clearmid"></i>
+                <center>
+                    <img data-src="./images/website/case/E1.png" style="width: 36%;vertical-align: middle;">
+                <img data-src="./images/website/case/E2.png" style="width: 32%;vertical-align: middle;">
+                </center>
+            </div>
+        </div>
+    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"><i class="clearmid"></i><div></div></div>
+                    <div class="swiper-button-prev"><i class="clearmid"></i><div></div></div>
+                    <div class="pagination"></div>
+                </div>
+            </div>
+        </div>
+
+          <div id="mobile-righter" >
+      <div class="cubes">
+
+          <div class="cube head" >
+              <p>　</p>
+          </div>
+          <div class="visiblecubes" style="display:none">
+              <div class="cube qq" onclick='javascript:{window.open("http://wpa.qq.com/msgrd?v=3&uin=3115292289&site=qq&menu=yes")}' >
+                  <img class="sicon support" src="./images/website/right-qq.png">
+                  <p>在线客服</p>
+              </div>
+              <div class="cube" onclick='javascript:{ $("#qiao-icon-group1")[0].click() }'>
+                  <img class="sicon price" src="./images/website/right-rmb.png">
+                  <p>报价咨询</p>
+              </div>
+              <a class="cube" href="tel:400-804-5550" onclick="javascript:void(0)">
+                  <img class="sicon tel" src="./images/website/right-tel.png">
+                  <p>电话咨询</p>
+                  <!-- <div class="phone400">400-804-5550</div> -->
+              </a>
+              <div class="cube" onclick='javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login#register&#34; + window.location.search }' >
+                  <img class="sicon login" src="./images/website/right-signin.png">
+                  <p >注册</p>
+              </div>
+              <div class="cube holder" >
+                  <p>　</p>
+              </div>
+          </div>
+          <div class="cube foot" ></div>
+      </div>   
+      <div id="righter-control" tab-index="-1" class="hide">         
+          <img src="./images/website/header-control.png" width="30%">
+      </div>
+  </div>
+
+  <div id="righter" >
+      <div class="cube" onclick='javascript:{window.open("http://wpa.qq.com/msgrd?v=3&uin=3115292289&site=qq&menu=yes")}' >
+          <div class="sicon support"></div>
+          <p>在线客服</p>
+      </div>
+      <div class="cube" onclick='javascript:{ $("#qiao-icon-group1")[0].click() }'><div class="sicon price"></div><p>报价咨询</p></div>
+      <div class="cube" >
+          <div class="sicon tel"></div>
+          <p>电话咨询</p>
+          <div class="phone400">400-804-5550</div>
+      </div>
+      <div class="cube" onclick='javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login#register&#34; + window.location.search }' >
+      <div class="sicon login"></div><p >注册</p></div>
+  </div>
+
+
+<div class="bottomline"></div>
+<div id="footer" class="mainStyle"  >
+
+    <div id="goTop">
+        <img src="./images/website/goTop.png" width="50" />
+    </div>
+
+  <div class="address" >
+    <div><img src="./images/website/sColorLogo.png" width="145" /></div>
+    <div class="text start"> 上海徐汇区宜山路888号新银大厦21层 </div>
+    <div class="text end"> 咨询电话：400-804-5550 </div>
+    <div class="netMedia"> 
+      <a class="" href="http://weibo.com/maxleap" >
+        <img src="./images/website/weibo.png" width="45">
+      </a>
+      <a style="position:relative">
+        <img onmouseover="javascript:{$(this).next().fadeIn(100) }" onmouseout="javascript:{$(this).next().fadeOut(100) }" src="./images/website/wechat.png" width="45">
+        <img class="wechatQr" src="./images/website/wechatQRcode.png" />
+      </a>
+    </div>
+  </div>
+  <div class="websiteMap" >
+    <ul class="end">
+      <li class="head">真旺云</li>
+      <li><a href='javascript:{ window.location.href = "http://" + window.location.host + "/" + window.location.search }'>首页</a></li>
+      <li><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/ourproduct" + window.location.search }'>产品中心</a></li>
+      <li><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/case" + window.location.search }'>案例展示</a></li>
+      <li><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/cowork" + window.location.search }'>渠道合作</a></li>
+      <li><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/aboutus" + window.location.search }'>关于我们</a></li>
+      <li><a href='javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login&#34; + window.location.search }'>登录/注册</a></li>
+    </ul>
+    <ul >
+      <li class="head">合作伙伴</li>
+      <li><a target="_blank" href='http://aws.amazon.com/'>亚马逊AWS</a></li>
+      <li><a target="_blank" href='http://www.hwclouds.com/'>华为云</a></li>
+      <li><a target="_blank" href='http://www.azure.cn/'>Azure</a></li>
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<div class="copyRight " >Copyright © 2016 MaxMon. All Rights reserved. 沪ICP备15041312号-2</div>
+
+<script src='./javascript/lib/jquery/jquery.min.js'></script>
+<script src='./javascript/lib/Swiper/swiper2.min.js'></script>
+<script src='./javascript/website/common/init.js?v=1464229120636'></script>
+
+<script>
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    var trackingid;
+    switch(window.location.hostname){
+        case "app.maxapps.cn" : trackingid = "UA-70747550-3";break;
+        case "www.maxapps.cn" : trackingid = "UA-70747550-6";break;
+        default : trackingid = "UA-70747550-5";break;
+    }
+
+    ga('create', trackingid , 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F88346f1b2c10f06fadc90fd5cfad5786' type='text/javascript'%3E%3C/script%3E"))
+</script>
+
+<!--<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9e77a5e78f320933d8149380a3e6c7ff";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>-->
+
+        <script src='./javascript/website/index.js?v=1464229120636'></script>
+    </body>
+</html>
+
+
+

@@ -1,0 +1,280 @@
+
+
+.bottomline{
+  border-bottom:1px solid #e5e5e5;
+  width:100%;
+  height:0px;
+}
+//PC
+@media (min-width: $mobile-break-point) {
+
+    .copyRight{
+        text-align:center;
+        padding:18px 0px;
+        border-top:1px solid #e5e5e5;
+        font-size:14px;
+        color:#666666;
+        background: #fff;
+        &.floating{
+            width: 100%;
+            background:rgba(255,255,255,0.6);
+            margin-top: -53px;
+        }
+    }
+    .wechatQr{
+        display:none;
+        position:absolute;
+        width:150px;
+        left:115%;
+        bottom:-15px;
+    }
+    #goTop{
+        position:fixed;
+        bottom:120px;
+        right:50%;
+        margin-right:-590px;
+        cursor:pointer;
+        display:none;
+    }
+    #footer{
+        padding:40px 0px 32px 0px;
+        .address{
+           float:left;
+           .text{
+             line-height:28px;
+             &.start{
+               margin-top: 20px;
+             }
+             &.end{
+               margin-bottom: 20px;
+             }
+           }
+         }
+        .websiteMap{
+            float:right;
+            ul{
+                text-align: center;
+                float:right;
+                margin-right:70px;
+                font-size: 14px;
+                a{
+                    color: #666666;
+                    display: block;
+                    &:hover{
+                        color:$main-blue;
+                    }
+                }
+                li{
+                    margin-top: 6px;
+                }
+                li.head{
+                    font-weight: bold;
+                    color: #666666;
+                }
+                &.end{
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+
+    #righter{
+      z-index: 10000;
+      position: fixed;
+      right: 0px;
+      top:50%;
+      margin-top: -160px;
+      .cube{
+        background: rgba(0,0,0,0.8);
+        margin-bottom: 1px;
+        color: #fff;
+        text-align: center;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        font-size: 12px;
+        padding: 15px 10px 0px 10px;
+        position: relative;
+
+        >.sicon{
+          background: url("../images/website/index/righter.png") no-repeat;
+          height: 30px;
+          width: 30px;
+          margin-bottom: 5px;
+          display: inline-block;
+          /*margin: 0 auto;*/
+        }
+        .support{
+          background-position: 0px 0px;
+        }
+        .price{
+          background-position: 0px -32px;
+        }
+        .tel{
+          background-position: 0px -102px;
+        }
+
+        .login{
+          background-position: 0px -68px;
+        }
+        .phone400{
+          background: rgba(0,0,0,0.6);
+          line-height: 80px;
+          width: 160px;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          z-index: -1;
+          font-size: 20px;
+          font-style: italic;
+          font-weight: bold;
+          cursor: auto;
+          display: none;
+          white-space: nowrap;
+        }
+
+      }
+    }
+
+}
+
+//mobile
+@media (max-width: $mobile-break-point - 1) { 
+
+
+  #mobile-righter{
+    position: fixed;
+    right: 2%;
+    z-index: 10000;
+    bottom: 10px;
+    .cubes{
+      box-sizing:content-box;
+      z-index: -1;
+      position: absolute;
+      bottom: 0px;
+      .visiblecubes{
+        font-size: 0px;
+        padding: 0px;
+        margin: 0px;
+      }
+      .cube{
+        -webkit-tap-highlight-color:initial;
+        display: block;
+        background: rgba(0,0,0,0.8);
+        color: #fff;
+        text-align: center;
+        width: $m-righter-wd;
+        height: $m-righter-wd + 20px;
+        cursor: pointer;
+        font-size: 0.8rem;
+        padding: 15px 0px 0px 0px;
+        position: relative;
+        &.head{
+          padding: 0px ;
+          height: $m-righter-wd/2;
+          border-radius: $m-righter-wd $m-righter-wd 0 0;
+        }
+        &.qq{
+          height: $m-righter-wd;
+          padding: 0px;
+        }
+        &.holder{
+          height: $m-righter-wd/2;
+        }
+        &.foot{
+          height: $m-righter-wd/2;
+          border-radius: 0px 0px $m-righter-wd $m-righter-wd;
+        }
+        >.sicon{
+          height: $m-righter-wd/2;
+          width: $m-righter-wd/2;
+          margin-bottom: 5px;
+          display: inline-block;
+          /*margin: 0 auto;*/
+        }
+      }
+    }
+    #righter-control{
+      border-radius: 50%;
+      text-align: center;
+      line-height: 1.2 * $m-righter-wd;
+      font-size: 0px;
+      z-index: 2;
+      background: rgba(0,0,0,0);
+      width: $m-righter-wd;
+      height: $m-righter-wd;
+      border: 2px solid #fff;
+      transition: 1s;
+      -webkit-transition: 1s;
+      -webkit-user-select: none;
+      user-select: none;
+      img{
+        transition: 0.2s;
+        -webkit-transition: 0.2s;
+        transform:rotate(135deg);
+        -webkit-transform:rotate(135deg);
+      }
+      &.animating{
+        transition: 0s;
+        -webkit-transition: 0s;
+        border-radius: 50%;
+        background: rgba(0,0,0,1)!important;
+      }
+      &.show{
+        img{
+          transform:rotate(0deg);
+          -webkit-transform:rotate(0deg);
+          background: rgba(0,0,0,0);
+        }
+      }
+    }
+  }
+
+  #footer{
+    padding: 60px 0 50px 0;
+    .address{
+      text-align: center;
+      .text{
+        font-size: 1.2rem;
+        line-height:28px;
+        &.start{
+          margin-top: 20px;
+        }
+        &.end{
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .websiteMap{
+      display: none;
+    }
+    .wechatQr{
+      display:none;
+      position:absolute;
+      width:150px;
+      left:115%;
+      bottom:-15px;
+    }
+    #goTop{
+      position:fixed;
+      bottom:120px;
+      right:50%;
+      margin-right:-590px;
+      cursor:pointer;
+      display:none;
+    }
+  }
+  .copyRight{
+    text-align:center;
+    padding:18px 0px;
+    border-top:1px solid #e5e5e5;
+    font-size:0.8rem;
+    color:#666666;
+    &.floating{
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      background:rgba(255,255,255,0.6);
+    }
+  }
+}

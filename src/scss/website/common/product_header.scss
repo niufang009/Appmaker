@@ -1,0 +1,35 @@
+    .product-mobile-menu {
+        .mobile-title {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 2.8rem;
+            color: #3399ff;
+        }
+        .mobile-line {
+            width: 86%;
+            border-top: 1px solid #eaeaea;
+            margin: 0 auto;
+        }
+        .mobile-menu {
+            ul {
+                width: 90%;
+                margin: 0 auto;
+                li {
+                    float: left;
+                    width: 20%;
+                    text-align: center;
+                    line-height: 2.8rem;
+                    &.active a{
+                        color: #3399ff;
+                        font-weight: bold;
+                    }
+                    a {
+                        color: #606062;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+

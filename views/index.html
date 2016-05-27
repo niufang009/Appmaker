@@ -1,0 +1,188 @@
+<% include website/var.html %>
+<% pageName = "home" %>
+
+<!doctype html>
+<html>
+    <head>
+        <title>真旺云应用平台_全网营销_App开发手机App软件移动App制作平台</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="<%= relativePath %>/stylesheets/index.css" type="text/css" />
+        <link rel="stylesheet" href="<%= relativePath %>/stylesheets/case.css" type="text/css" />
+
+        <% include website/header.html %>
+
+        <div style="position:relative">
+            <div id="landing-image">
+                <i class="clearmid"></i>
+                <video width="100%" data-src="<%= relativePath %>/images/website/intro-new.webm" autoplay loop ></video>
+                <div class="mask" style="display:none"></div>
+            </div>
+        </div>
+
+        <div id="index" class="mainStyle" >
+            <div class="landing" >
+                <i class="clearmid"></i>
+                <div class="tips">
+                    <p class="title">帮助企业构建与移动互联网用户的</p>
+                    <p class="main-title">零距离营销平台</p>
+                    <p class="explain">让完全不懂技术的个人或企业通过简单的配置操作生成<i></i>App + 微信商城 + 手机网站 + PC网站<br>打通淘宝、京东等平台，一站式管理全网营销</p>
+                    <div class="gobtn-wrapper">
+                        <div class="gobtn" onclick="<%=loginLink %>" >
+                            <i class="clearmid"></i>
+                            <div >免费体验</div>
+                            <img  src="<%= relativePath %>/images/website/index/start.png" width="30" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="basicInfo">
+                <div class="clearTop h60"></div>
+                <div class="left w430" >
+                    <div class="appcube wechat"><img src="<%= relativePath %>/images/website/index/wechat.png" / ></div>
+                    <div class="appcube appstore"><img src="<%= relativePath %>/images/website/index/appstore.png" / ></div>
+                    <div class="appcube"></div>
+                    <div class="appcube "></div>
+                    <div class="appcube apk"><img src="<%= relativePath %>/images/website/index/apk.png" / ></div>
+                    <div class="appcube apple"><img src="<%= relativePath %>/images/website/index/apple.png" / ></div>
+                    <div class="appcube code"><img src="<%= relativePath %>/images/website/index/win.png" / ></div>
+                    <div class="appcube pad"><img src="<%= relativePath %>/images/website/index/pad.png" / ></div>
+                    <div class="appcube"></div>
+                </div>
+                <div class="right w500" >
+                    <div class="title-1-wrapper">
+                        <div class="grayLine"></div>
+                        <h class="title-1">真旺云能做什么 ？</h>
+                        <div class="grayLine"></div>
+                        <div class="title-1-3"></div>
+                    </div>
+
+                    <div class="title-2">
+                        <h>在全网环境中，我们可以为您：</h>
+                    </div>
+                    <img class="icons" src="<%= relativePath %>/images/website/index/icons.png" />
+                    <ul class="dowhat" >
+                        <li >
+                            <div class="dot floating"></div>
+                            <div class="title-3">全网多渠道营销</div>
+                            <div class="title-3-2">同时在App，微信商城，手机网站，PC网站和淘宝，京东等平台展开营销，让您业绩倍增。</div>
+                        </li>
+                        <li >
+                            <div class="dot floating"></div>
+                            <div class="title-3">高效用户运营，节省流量成本</div>
+                            <div class="title-3-2">通过积分，社区运营和客户关系管理等方式长期留存用户，形成持续消费，不断降低用户获取成本。</div>
+                        </li>
+                        <li >
+                            <div class="dot floating"></div>
+                            <div class="title-3">全网融合推广</div>
+                            <div class="title-3-2">传统SEO结合微信、直达号和App营销推广，最快增长业绩。</div>
+                        </li>
+                        <li >
+                            <div class="dot floating"></div>
+                            <div class="title-3">粉丝运营与互动</div>
+                            <div class="title-3-2">多样吸粉，飞速增长流量，一元夺宝、优惠券等活动快速拉动营收。</div>
+                        </li>
+                        <li >
+                            <div class="dot floating"></div>
+                            <div class="title-3">大数据分析</div>
+                            <div class="title-3-2">全面洞悉客户消费行为，实时用户画像，精准掌握销售转化。</div>
+                        </li>
+                        <li >
+                            <div class="dot floating"></div>
+                            <div class="title-3">一站式管理，最小运营成本</div>
+                            <div class="title-3-2">统一后台同时管理多端营销，最小人员配置，最大运营效率。</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+                <div class="clearTop h60"></div>
+                <div class="baseline w490">
+                    <div class="title-1-wrapper">
+                        <div class="grayLine"></div>
+                        <h class="title-1">全网营销行业解决方案</h>
+                        <div class="grayLine"></div>
+                        <div class="title-1-3"></div>
+                    </div>
+                    <div class="title-2 floating">
+                        <h>电商品牌如何实现全网营销 ？</h>
+                    </div>
+                    <div class="paragraph">用真旺云应用平台，电商品牌可以开速发布商城App（iOS和安卓），微信商城和网站，让消费者可以在各个平台上和品牌连接并形成消费。</div>
+                    <div class="paragraph"><div class="mobile-pic-decoration"><img class="mobile-lazy" data-src="<%= relativePath %>/images/website/index/phoneShopS.png" style="float:right;" /></div>内容和社交是移动电商留存用户和促进消费的重要方式，电商品牌只要在真旺云平台进行简单配置，就可以在App里加入内容发布模块和社交模块，大大提升消费者的活跃度和参与感。</div>
+                    <div class="paragraph">真旺云平台能够帮助电商品牌在淘宝、天猫、京东等平台外建立起有效的营销渠道，提供专业的一站式运营后台，对用户行为和消费趋势进行大数据分析，帮助电商把运营从单纯的流量运营转变成流量、客户、社交、内容等融合的高效运营。</div>
+                    <div class="clearfix"></div>
+                    <div class="special" >
+                        <div class="special-title" style=""><span>特色功能</span><div class="grayLine"></div></div>
+                        <div class="icon-wrapper"><img src="<%= relativePath %>/images/website/index/san.png" class="special-icon push" /><p>三级分销</p></div>
+                        <div class="icon-wrapper"><img src="<%= relativePath %>/images/website/index/rmb.png" class="special-icon gamble" /><p>一元夺宝</p></div>
+                        <div class="icon-wrapper"><img src="<%= relativePath %>/images/website/index/support.png" class="special-icon suppot" /><p>在线客服</p></div>
+                        <div class="icon-wrapper"><img src="<%= relativePath %>/images/website/index/bbs.png" class="special-icon bbs" /><p>App内部论坛</p></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                <div class="baseline w480 phoneShop" style="text-align:right">
+                    <img class="pc-lazy" data-src="<%= relativePath %>/images/website/index/phoneShop.png" />
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearTop h60"></div>
+            <div id="moreSolution" >
+                <div class="grayLine"></div>
+                <div class="content" >
+                    <div class="title-1">更多行业解决方案</div>
+                    <div class="title-1-4"></div>
+                </div>
+                <div class="grayLine"></div>
+            </div>
+            <div class="solutionLinks" >
+                <div class="link"><a href='<%= postLink %>'>电商行业</a></div><div class="divider gray"></div>
+                <div class="link"><a href='<%= postLink %>'>社交行业</a></div><div class="divider gray"></div>
+                <div class="link"><a href='<%= postLink %>'>服务行业</a></div><div class="divider gray"></div>
+                <div class="link"><a href='<%= postLink %>'>教育行业</a></div><div class="divider gray desk-show"></div><i></i>
+                <div class="link"><a href='<%= postLink %>'>医疗行业</a></div><div class="divider gray"></div>
+                <div class="link"><a href='<%= postLink %>'>餐饮行业</a></div><div class="divider gray"></div>
+                <div class="link"><a href='<%= postLink %>'>汽车行业</a></div><div class="divider gray"></div>
+                <div class="link"><a href='<%= postLink %>'>美容行业</a></div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="clearTop h30"></div>
+            <div class="moreSlution" onclick="<%= postLink %>">更多行业方案请注册获取</div>
+
+        </div>
+        <div class="clearTop h90"></div>
+        <div id="cases-swiper" >
+            <div class="cases-wrapper" >
+                <div class="swiper-list mainStyle" >
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" >
+                                <% include components/case1.html %>
+                            </div>
+                            <div class="swiper-slide  ">
+                                <% include components/case2.html %>
+                            </div>
+                            <div class="swiper-slide  ">
+                                <% include components/case3.html %>
+                            </div>
+                            <div class="swiper-slide  ">
+                                <% include components/case4.html %>
+                            </div>
+                            <div class="swiper-slide  ">
+                                <% include components/case5.html %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"><i class="clearmid"></i><div></div></div>
+                    <div class="swiper-button-prev"><i class="clearmid"></i><div></div></div>
+                    <div class="pagination"></div>
+                </div>
+            </div>
+        </div>
+
+        <% include website/footer.html %>
+        <script src='<%= relativePath %>/javascript/website/index.js'></script>
+    </body>
+</html>
+
+
+

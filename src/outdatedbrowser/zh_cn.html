@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" class="no-js">
+<head >
+    <meta charset="utf-8">
+    <title>升级浏览器</title>
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="./fonts.css">
+    <link rel="stylesheet" href="./outdatedBrowser.min.css">
+    <link rel="stylesheet" href="./awards.css">
+    <link rel="stylesheet" href="./mobile.min.css">
+
+    <!--[if lte IE 9]>
+    <script src="./html5.js"></script>
+    <link rel="stylesheet" type="text/css" href="./ie9-and-down.min.css">
+    <![endif]-->
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" type="text/css" href="./ie8-and-down.min.css">
+    <![endif]-->
+    <script type="text/javascript">
+
+        function checkBrowser(v) {
+            var userAgent = navigator.userAgent.toLowerCase(),low = false;
+            if (isChromium(userAgent)) {
+                low = chromium(userAgent,v.GG);
+            } else if (isWebkit(userAgent)) {
+                low = Safari(userAgent,v.Safari);
+            } else if (isFireFox(userAgent)) {
+                low = FireFox (userAgent,v.FF)
+            } else if (isIE){
+                low = IE(v.IE)
+            } else {
+                low = true;
+            }
+            checkjump(low)
+        }
+
+        function checkjump(low){
+            var url;
+            if(!low) {
+                if(localStorage.lastUrl)
+                    window.location.href = JSON.parse(localStorage.lastUrl).url;
+                else
+                    window.location.href = "/index" + window.location.search
+            }
+        }
+
+        function Safari(userAgent,v) {
+            var version = userAgent.match(/version\/([\d.]+)/)[1];  
+            return parseInt(version) < v;
+        }
+
+        function FireFox(userAgent,v) {
+            var version = userAgent.match(/firefox\/([\d.]+)/)[1];
+            return parseInt(version) < v;
+        }
+
+        function chromium(userAgent,v) {
+            var version = userAgent.match(/chrome\/([\d.]+)/)[1];
+            var versionNum = version.split(".")[0];
+            return parseInt(versionNum) < v;
+        }
+
+        function IE (v) {
+            var version = 999999;
+            if (navigator.appName == 'Microsoft Internet Explorer') {
+                new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent);
+                version = parseInt(RegExp.$1);
+            } else if ("ActiveXObject" in window) {
+                version = 11;
+            }
+            return parseInt(version) < v;
+        };
+        // 判断是否为chrome内核浏览器
+        function isChromium(userAgent) {
+            var chromium = "mozilla/&&applewebkit/&&chrome/&&safari/".split("&&");
+            for (var i = 0; i < chromium.length; i++)
+                if (userAgent.indexOf(chromium[i]) < 0)
+                    return false;
+            return true;
+        }
+
+        // 判断是否为webkit内核浏览器
+        function isWebkit(userAgent) {
+            if (userAgent.indexOf("applewebkit/") < 0)
+                return false;
+            return true;
+        }
+
+        function isFireFox(userAgent) {
+            if (userAgent.indexOf("firefox/") < 0)
+                return false;
+            return true;
+        }
+
+        function isIE(userAgent) {
+            if ((navigator.userAgent.indexOf('MSIE') >= 0) && (navigator.userAgent.indexOf('Opera') < 0))
+                return true;
+            return false;
+        }
+
+        checkBrowser({IE:11,FF:42,GG:35,Safari:7});
+
+    </script>
+    <script src="./modernizr-2.6.2.min.js"></script>
+    <noscript>
+        <style type="text/css">
+            .menu, .newBrowser{display: none;}
+            .disabledJS{display: block;}
+            .c_browsers.hideBrowsers{opacity: 1;}
+            .browser .statistic, .browser .download{display: block; opacity: 0; margin-left: 0; left: 0; width: 100%;}
+            .browser .download a{ max-width: 210px; width: 80%;}
+            .browser:hover .statistic, .browser:hover .download{opacity: 1;}
+        </style>
+    </noscript>
+
+</head>
+<body class="noajax  home">
+
+<div id="container" class="container effect">
+
+    <div class="pusher">
+        <!-- LOAD CONTENT -->
+        <div class="loadContent current">
+
+            <div id="content" class="home" role="main" >
+
+                <div id="preload" aria-hidden="true">
+                    <img src="./imgs/browsers-bg.png" alt="">
+                    <img src="./imgs/operatingsystems-bg.png" alt="">
+                </div>
+
+
+                <div class="inner">
+
+                    <!--  HEADER  -->
+                    <header class="title" role="banner">
+                        <div class="browserVersion newBrowser">
+                            <h1>升级浏览器</h1>
+                            <p>为了更佳的浏览体验，将您的浏览器保持最新。在这里您可以获得最新的版本。</p>
+                        </div>
+                        <div class="browserVersion disabledJS" aria-hidden="true">
+                            <h1>Outdated Browser</h1>
+                            <p>您的浏览器已禁用 Javascript，启用它获得更好的体验。</p>
+                        </div>
+                        <div class="browserVersion ifMobile" aria-hidden="true">
+                            <h1>Outdated Browser</h1>
+                            <p>这是为桌面用户准备的工具，<br>但您可以安心在这里浏览</p>
+                        </div>
+                        <!-- end HEADER  -->
+                    </header>
+
+
+
+
+                    <section class="c_browsers sorted kwicks kwicks-horizontal hideBrowsers">
+
+                        <!-- BROWSER - Chrome -->
+                        <div id="chrome" class="browser">
+                            <h3 class="statistic"><span>36.5%</span> 的人们在使用 <br>这款浏览器</h3>
+                            <div class="center">
+                                <h2><span></span> 谷歌浏览器 </h2>
+                                <div class="download">
+                                    <a href="https://www.baidu.com/s?wd=chrome" target="_blank" class="browserlink" >下载</a>
+                                    <h4>版本 <span>46</span></h4>
+                                </div>
+                            </div>
+                            <div class="available">
+                                <h4>在以下操作系统可用 </h4>
+                                <ul>
+                                    <li class="windows"><span>Windows</span></li>
+                                    <li class="mac"><span>Mac OS</span></li>
+                                    <li class="linux"><span>Linux</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- BROWSER - Firefox -->
+                        <div id="firefox" class="browser">
+                            <h3 class="statistic"><span>17.2%</span> 的人们在使用 <br>这款浏览器</h3>
+                            <div class="center">
+                                <h2><span></span> 火狐浏览器 </h2>
+                                <div class="download">
+                                    <a href="http://www.mozilla.org/firefox/new/" target="_blank" class="browserlink" >下载</a>
+                                    <h4>版本 <span>41</span></h4>
+                                </div>
+                            </div>
+                            <div class="available">
+                                <h4>在以下操作系统可用 </h4>
+                                <ul>
+                                    <li class="windows"><span>Windows</span></li>
+                                    <li class="mac"><span>Mac OS</span></li>
+                                    <li class="linux"><span>Linux</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- BROWSER - Internet Explorer -->
+                        <div id="internetExplorer" class="browser">
+                            <h3 class="statistic"><span>27.5%</span> 的人们在使用 <br>这款浏览器</h3>
+                            <div class="center">
+                                <h2><span></span> 360浏览器 </h2>
+                                <div class="download">
+                                    <a href="http://se.360.cn/" target="_blank" class="browserlink" >下载</a>
+                                    <h4>版本 <span>8</span></h4>
+                                </div>
+                            </div>
+                            <div class="available">
+                                <h4>在以下操作系统可用 </h4>
+                                <ul class="single">
+                                    <li class="windows"><span>Windows</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- BROWSER - Safari -->
+                        <div id="safari" class="browser">
+                            <h3 class="statistic"><span>4.2%</span> 的人们在使用 <br>这款浏览器</h3>
+                            <div class="center">
+                                <h2><span></span> 苹果 SaFari</h2>
+                                <div class="download">
+                                    <a href="http://support.apple.com/downloads/#safari" target="_blank" class="browserlink" >下载</a>
+                                    <h4>版本 <span>9</span></h4>
+                                </div>
+                            </div>
+                            <div class="available">
+                                <h4>在以下操作系统可用 </h4>
+                                <ul class="single">
+                                    <li class="mac"><span>Mac OS</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- BROWSER - Opera -->
+                        <div id="opera" class="browser">
+                            <h3 class="statistic"><span>11.9%</span> 的人们在使用 <br>这款浏览器</h3>
+                            <div class="center">
+                                <h2><span></span> QQ浏览器 </h2>
+                                <div class="download">
+                                    <a href="http://browser.qq.com/" target="_blank"  class="browserlink">下载</a>
+                                    <h4>版本 <span>9</span></h4>
+                                </div>
+                            </div>
+                            <div class="available">
+                                <h4>在以下操作系统可用 </h4>
+                                <ul>
+                                    <li class="windows"><span>Windows</span></li>
+                                    <li class="mac"><span>Mac OS</span></li>
+<!--                                     <li class="linux"><span>Linux</span></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end SECTION -->
+                    </section>
+
+                    <!-- <section class="c_browsers sorted kwicks kwicks-horizontal"></section> -->
+
+                    <!-- end .inner -->
+                </div>
+                <!-- end #content -->
+            </div>    <!-- end .loadContent -->
+        </div>
+
+
+        <!-- end .pusher -->
+    </div>
+
+
+    <!-- end .container -->
+</div>
+
+
+<!-- KEEP CALM MESSAGE -->
+<div class="keep_calm" aria-hidden="true">
+    <p class="center">冷静 <br><span class="xs">这是为</span>桌面<br>用户提供的<span class="xs">不是</span>为手机用户提供的。</p>
+    <p class="close">关闭</p>
+</div>
+
+
+<!-- ============= SCRIPTS ============= -->
+<script src="./jquery-1.10.1.min.js"></script>
+<script src="./outdatedBrowser.min.js"></script>
+
+<!--[if !IE]><!-->
+<script type="text/javascript" src="./main.min.js"></script>
+<!--<![endif]-->
+
+<!--[if gte IE 9]>
+<script type="text/javascript" src="./main.min.js"></script>
+<![endif]-->
+<script>
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    var trackingid;
+    switch(window.location.hostname){
+        case "app.maxapps.cn" : trackingid = "UA-70747550-3";break;
+        case "www.maxapps.cn" : trackingid = "UA-70747550-6";break;
+        default : trackingid = "UA-70747550-5";break;
+    }
+
+    ga('create', trackingid , 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>

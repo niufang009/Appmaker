@@ -1,0 +1,246 @@
+
+.nav-btn-white{
+	@include action-button(150px, 40px, $bgBlue, $white, 3px, $white, 2px);
+	&:hover, &:active{
+		background: $white !important;
+		border-color: $white;
+	}
+	&:hover{
+		opacity: 0.9;
+	}
+	&:active{
+		opacity: 0.85;
+	}
+}
+.nav-btn-transparent{
+	@include action-button(150px, 40px, $white, transparent, 3px, $white, 2px);
+	&:hover, &:active{
+		background: $white !important;
+		border-color: $white;
+		color: $bgBlue;
+	}
+	&:active{
+		opacity: 0.85;
+	}
+}
+.bg-linear-gradient-analytics{
+	@include bg-linear-gradient(top, #1f7edd, #52a1ef);
+}
+.bg-linear-gradient-devcenter{
+	@include bg-linear-gradient(top, #259C4B, #43CA72);
+}
+.bg-linear-gradient-promotion{
+	@include bg-linear-gradient(top, #EA9323, #FFC63D);
+}
+.bg-linear-gradient-operation{
+	@include bg-linear-gradient(top, #DA5957, #F77F7D);
+}
+@keyframes slide-to-right {
+	from{
+		transform: translate3d(-2000px, 0, 0);
+	}
+	to{
+		transform: translate3d(0, 0 ,0);
+	}
+}
+@keyframes slide-to-left {
+	from{
+		transform: translate3d(2000px, 0, 0);
+	}
+	to{
+		transform: translate3d(0, 0 ,0);
+	}
+}
+.module-header-section{
+	overflow: hidden;//修复safari横向滚动bug
+	padding: 80px 0 60px;
+	height: 650px;
+	text-align: center;
+	color: $white;
+	h1, h2{
+		color: $white;
+		@include use-font-shsch();
+	}
+	h1{
+		font-size: 34px;
+	}
+	h2{
+		font-size: 24px;
+	}
+	.left, .right{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		max-width: calc(100% - 40px);
+	}
+	.left{
+		position: absolute;
+		width: 600px;
+		height: 400px;
+	}
+	.right{
+		right: 0;
+		width: 400px;
+		text-align: left;
+		//height: 400px;
+	}
+	.nav-item{
+		display: inline-block;
+		a{
+			width: 120px;
+		}
+		&:first-child{
+		}
+		&:last-child{
+			margin-left: 20px;
+		}
+	}
+}
+.module-header-right-content{
+	transform: translate3d(2000px, 0, 0);
+	animation: slide-to-left 1s forwards;
+}
+.module-header-section-innerwrapper{
+	position: relative;
+	max-width: 1150px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.module-header-icon{
+	font-size: 90px;
+	vertical-align: middle;
+}
+.module-header-h{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 25px;
+}
+.module-header-desc{
+	margin: 40px 0 70px;
+	font-size: 14px;
+	line-height: 1.8;
+}
+.module-header-banner-img{
+	position: absolute;
+	right: 0;
+	transform: translate3d(-1000px, 0, 0);
+	&:nth-of-type(1){
+		margin-right: 110px;
+		margin-top: 65px;
+		width: 482px;
+		animation: slide-to-right 1s 0.5s forwards;
+	}
+	&:nth-of-type(2){
+		width: 534px;
+		animation: slide-to-right 1s 0.3s forwards;
+	}
+}
+.module-header-section-analytics{
+	.nav-btn-white,
+	.nav-btn-transparent {
+		&:hover, &:active{
+			color: $analytics-color;
+		}
+	}
+}
+.module-header-section-devcenter{
+	.nav-btn-white,
+	.nav-btn-transparent:hover,
+	.nav-btn-transparent:active {
+		color: $devcenter-color;
+	}
+}
+.module-header-section-promotion{
+	.nav-btn-white,
+	.nav-btn-transparent:hover,
+	.nav-btn-transparent:active{
+		color: $promotion-color;
+	}
+}
+.module-header-section-operation{
+	.nav-btn-white,
+	.nav-btn-transparent:hover,
+	.nav-btn-transparent:active{
+		color: $operation-color;
+	}
+}
+
+@media screen and (max-width: $normal-width){
+	.module-header-section {
+		.left, .right{
+			position: static;
+			transform: none;
+			left: 0;
+			top: 0;
+			margin: 0 auto;
+		}
+		.left{
+			position: relative;
+			height: 270px;
+			width: 300px;
+		}
+		.right{
+		}
+	}
+	.module-header-banner-img{
+		&:nth-of-type(n){
+			position: absolute;
+			animation: none !important;
+			transform: none;
+			width: 100%;
+			max-width: 400px;
+			margin: 0;
+		}
+		&:nth-of-type(1){
+			left: -20px;
+			top: 30px;
+		}
+		&:nth-of-type(2){
+			left: 20px;
+		}
+	}
+	.module-header-desc{
+		margin: 20px 0 30px;
+	}
+	.module-header, .module-btns{
+		text-align: center;
+	}
+	.module-header-right-content{
+		transform: none !important;
+		animation: none !important;
+	}
+}
+@media screen and (max-width: $middle-width){
+	.module-header-section {
+		.right{
+			max-width: 100%;
+		}
+	}
+	.module-header-icon{
+		font-size: 80px;
+	}
+}
+
+@media screen and (max-width: $small-width){
+	.module-header-icon{
+		font-size: 70px;
+	}
+	.module-header-h{
+		margin-left: 10px;
+		h1{
+			font-size: 30px;
+		}
+		h2{
+			font-size: 20px;
+		}
+	}
+	.nav-btn-white, .nav-btn-transparent{
+		width: 120px;
+	}
+	.module-header-section .nav-item{
+		width: 128px;
+		&:last-child{
+			margin-left: 20px;
+		}
+	}
+}

@@ -1,0 +1,131 @@
+@mixin inlineblock-middle(){
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@mixin inlineblock-top(){
+  display: inline-block;
+  vertical-align: top;
+}
+
+@mixin box-shadow(){
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+@mixin use-font-shsch(){
+  font-family: SHSCN, $font-family;
+}
+
+@mixin action-button($width: 120px, $height: 50px, $color: #fff, $bgcolor: #33b1eb, $radius: $height, $bordercolor: $bgcolor, $borderwidth: 0px){
+  position: relative;
+  display: inline-block;
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+  line-height: $height - $borderwidth * 2;
+  color: $color;
+  background-color: $bgcolor;
+  white-space: nowrap;
+  text-align: center;
+  font-weight: normal;
+  border-color: $bordercolor;
+  transition: $animationDuration;
+  border: $borderwidth solid $bordercolor;
+  &:hover{
+    background-color: darken($bgcolor, 10%) !important;
+    border-color: darken($bordercolor, 10%);
+  }
+  &:active{
+    border-radius: $radius;
+    background-color: darken($bgcolor, 15%) !important;
+    border-color: darken($bordercolor, 15%);
+  }
+  &.loading{
+    background-color: darken($bgcolor, 15%) !important;
+    border-color: darken($bordercolor, 15%);
+    pointer-events: none;
+    font-size: 0 !important;
+    &:after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      content: '';
+      width: 1em;
+      height: 1em;
+      animation: rotateZ .6s linear;
+      animation-iteration-count: infinite;
+      border-radius: 500rem;
+      border-color: $white rgba(0, 0, 0, .15) rgba(0, 0, 0, .15);
+      border-style: solid;
+      border-width: .2em;
+      font-size: 14px;
+    }
+  }
+  &.disabled{
+    opacity: 0.7;
+    pointer-events: none;
+  }
+}
+
+@mixin triangleCommon($bgColor){
+  position: relative;
+  &:before,
+  &:after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    content: '';
+
+    border: 10px solid $white;
+    border-right-color: $borderGray;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+  }
+  &:after{
+    border-color: transparent;
+    border-right-color: $bgColor;
+  }
+}
+@mixin triangleLeft($bgColor: $white){
+  @include triangleCommon($bgColor);
+  &:before,
+  &:after{
+    top: 25px;
+  }
+  &:before{
+    margin-left: -20px;
+  }
+  &:after{
+    margin-left: -17px;
+  }
+}
+@mixin triangleTop($bgColor: $white){
+  @include triangleCommon($bgColor);
+  &:before,
+  &:after{
+    left: 50%;
+    margin-left: -10px;
+    transform: rotate(90deg);
+  }
+  &:before{
+    margin-top: -16px;
+  }
+  &:after{
+    margin-top: -14px;
+  }
+}
+@mixin link-color($color: $green){
+  transition: $animationDuration;
+  &:hover{
+    color: $color;
+  }
+}
+@mixin bg-linear-gradient($startposition, $startcolor, $endcolor){
+  background: linear-gradient($startposition, $startcolor, $endcolor);
+  background: -ms-linear-gradient($startposition, $startcolor, $endcolor);
+  background: -moz-linear-gradient($startposition, $startcolor, $endcolor);
+}

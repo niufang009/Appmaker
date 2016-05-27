@@ -1,0 +1,679 @@
+.slide-createnow {
+  #bg {
+    position: absolute;
+    width: 1093px;
+    height: 838px;
+    margin: 0 auto;
+    background: transparent url("/images/website/createanimation/bg.png") no-repeat center center;
+    top:50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+  }
+  #left-phone, #right-phone, #top-phone {
+    /*background: red;*/
+    /*border:1px solid red;*/
+    position: absolute;
+  }
+  #top-phone {
+    width: 245px;
+    height: 215px;
+    left: 553px;
+    top: 100px;
+  }
+  #left-phone {
+    width: 131px;
+    height: 128px;
+    top: 335px;
+    left: 84px;
+  }
+  #right-phone {
+    width: 131px;
+    height: 108px;
+    top: 332px;
+    left: 884px;
+  }
+  .left-square, .right-square {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    /*background: green;*/
+    text-align: center;
+  }
+  .left-square {
+    top: 0;
+    left: 0;
+  }
+  .right-square {
+    top: 0;
+    right: 0;
+  }
+  #top-phone .left-square, #top-phone .right-square {
+    width: 117px;
+    height: 115px;
+  }
+  .left-square:after, .right-square:after, .rectangle:after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    background: #cccccc;
+  }
+  .rectangle {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    /*background: green;;*/
+  }
+  #left-phone .rectangle {
+    height: 60px;
+  }
+  #right-phone .rectangle {
+    height: 40px;
+  }
+  #top-phone .rectangle {
+    height: 90px;
+  }
+  .remove-rectangle, .remove-left-square, .remove-right-square {
+    position: absolute;
+    background: transparent url("/images/website/createanimation/delete.png") no-repeat center center;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    z-index: 2;
+  }
+  .remove-left-square {
+    top: 500px;
+    left: 525px;
+  }
+  .remove-right-square {
+    top: 500px;
+    left: 650px;
+  }
+  .remove-rectangle {
+    top: 580px;
+    left: 650px;
+  }
+  .hand {
+    position: absolute;
+    background: transparent url("/images/website/createanimation/hand.png") no-repeat center bottom;
+    height: 116px;
+    width: 91px;
+    top: 710px;
+    left: 510px;
+    z-index: 3;
+    -webkit-transition: background 1s, left 1s, top 1s;
+    transition: background 1s, left 1s, top 1s;
+  }
+  .hand.click-remove-rectangle {
+    background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+    top: 575px;
+    left: 622px;
+  }
+  .hand.click-remove-right-sequare {
+    background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+    top: 495px;
+    left: 497px;
+  }
+  .hand.click-remove-left-sequare {
+    background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+    top: 495px;
+    left: 622px;
+  }
+  .hand.click-add-left-sequare {
+    background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+    top: 530px;
+    left: 450px;
+  }
+  .hand.click-add-right-sequare {
+    background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+    top: 530px;
+    left: 570px;
+    z-index: 3;
+  }
+  .hand.click-add-rectangle {
+    background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+    top: 610px;
+    left: 510px;
+    z-index: 3;
+  }
+  .add-left-square, .add-right-square, .add-rectangle {
+    background: #999999 url("/images/website/createanimation/add.png") no-repeat center center;
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+  }
+  .add-left-square {
+    top: 510px;
+    left: 435px;
+    width: 100px;
+    height: 60px;
+  }
+  .add-right-square {
+    top: 510px;
+    left: 558px;
+    width: 100px;
+    height: 60px;
+  }
+  .add-rectangle {
+    top: 589px;
+    left: 434px;
+    width: 225px;
+    height: 60px;
+  }
+
+  #bg.active .hand {
+    -webkit-animation: myanimate-hand 10s infinite;
+    animation: myanimate-hand 10s infinite;
+  }
+  #bg.active .remove-left-square {
+    -webkit-animation: myanimate-remove-left-square 10s infinite;
+    animation: myanimate-remove-left-square 10s infinite;
+  }
+  #bg.active .remove-right-square {
+    -webkit-animation: myanimate-remove-right-square 10s infinite;
+    animation: myanimate-remove-right-square 10s infinite;
+  }
+  #bg.active .remove-rectangle {
+    -webkit-animation: myanimate-remove-rectangle 10s infinite;
+    animation: myanimate-remove-rectangle 10s infinite;
+  }
+  #bg.active #left-phone .left-square:after {
+    -webkit-animation: myanimate-left-square 10s infinite;
+    animation: myanimate-left-square 10s infinite;
+  }
+  #bg.active #left-phone .right-square:after {
+    -webkit-animation: myanimate-right-square 10s infinite;
+    animation: myanimate-right-square 10s infinite;
+  }
+  #bg.active #left-phone .rectangle:after {
+    -webkit-animation: myanimate-rectangle 10s infinite;
+    animation: myanimate-rectangle 10s infinite;
+  }
+  #bg.active #right-phone .left-square:after {
+    -webkit-animation: myanimate-left-square 10s infinite;
+    animation: myanimate-left-square 10s infinite;
+  }
+  #bg.active #right-phone .right-square:after {
+    -webkit-animation: myanimate-right-square 10s infinite;
+    animation: myanimate-right-square 10s infinite;
+  }
+  #bg.active #right-phone .rectangle:after {
+    -webkit-animation: myanimate-rectangle 10s infinite;
+    animation: myanimate-rectangle 10s infinite;
+  }
+  #bg.active #top-phone .left-square:after {
+    -webkit-animation: myanimate-left-square 10s infinite;
+    animation: myanimate-left-square 10s infinite;
+  }
+  #bg.active #top-phone .right-square:after {
+    -webkit-animation: myanimate-right-square 10s infinite;
+    animation: myanimate-right-square 10s infinite;
+  }
+  #bg.active #top-phone .rectangle:after {
+    -webkit-animation: myanimate-rectangle 10s infinite;
+    animation: myanimate-rectangle 10s infinite;
+  }
+  #bg.active .add-left-square {
+    -webkit-animation: myanimate-add-left-square 10s infinite;
+    animation: myanimate-add-left-square 10s infinite;
+  }
+  #bg.active .add-right-square {
+    -webkit-animation: myanimate-add-right-square 10s infinite;
+    animation: myanimate-add-right-square 10s infinite;
+  }
+  #bg.active .add-rectangle {
+    -webkit-animation: myanimate-add-rectangle 10s infinite;
+    animation: myanimate-add-rectangle 10s infinite;
+  }
+  @-webkit-keyframes myanimate-hand {
+    10% {
+      background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+      top: 530px;
+      left: 450px;
+    }
+    20% {
+      background: transparent url("/images/website/createanimation/hand.png") no-repeat center bottom;
+      top: 710px;
+      left: 510px;
+    }
+    30% {
+      background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+      top: 530px;
+      left: 570px;
+    }
+    40% {
+      background: transparent url("/images/website/createanimation/hand.png") no-repeat center bottom;
+      top: 710px;
+      left: 510px;
+    }
+    50% {
+      background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+      top: 610px;
+      left: 510px;
+    }
+    60% {
+      background: transparent url("/images/website/createanimation/hand.png") no-repeat center bottom;
+      top: 710px;
+      left: 510px;
+    }
+    70% {
+      background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+      top: 575px;
+      left: 622px;
+    }
+    80% {
+      background: transparent url("/images/website/createanimation/hand.png") no-repeat center bottom;
+      top: 710px;
+      left: 510px;
+    }
+    90% {
+      background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+      top: 610px;
+      left: 510px;
+    }
+    100% {
+      background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+      top: 610px;
+      left: 510px;
+    }
+  }
+  @keyframes myanimate-hand {
+    10% {
+      background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+      top: 530px;
+      left: 450px;
+    }
+    20% {
+      background: transparent url("/images/website/createanimation/hand.png") no-repeat center bottom;
+      top: 710px;
+      left: 510px;
+    }
+    30% {
+      background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+      top: 530px;
+      left: 570px;
+    }
+    40% {
+      background: transparent url("/images/website/createanimation/hand.png") no-repeat center bottom;
+      top: 710px;
+      left: 510px;
+    }
+    50% {
+      background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+      top: 610px;
+      left: 510px;
+    }
+    60% {
+      background: transparent url("/images/website/createanimation/hand.png") no-repeat center bottom;
+      top: 710px;
+      left: 510px;
+    }
+    70% {
+      background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+      top: 575px;
+      left: 622px;
+    }
+    80% {
+      background: transparent url("/images/website/createanimation/hand.png") no-repeat center bottom;
+      top: 710px;
+      left: 510px;
+    }
+    90% {
+      background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+      top: 610px;
+      left: 510px;
+    }
+    100% {
+      background: transparent url("/images/website/createanimation/hand-click.png") no-repeat center bottom;
+      top: 610px;
+      left: 510px;
+    }
+  }
+  @-webkit-keyframes myanimate-remove-left-square {
+    10% {
+      opacity: 0;
+    }
+    11% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes myanimate-remove-left-square {
+    10% {
+      opacity: 0;
+    }
+    11% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes myanimate-remove-right-square {
+    30% {
+      opacity: 0;
+    }
+    31% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes myanimate-remove-right-square {
+    30% {
+      opacity: 0;
+    }
+    31% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes myanimate-remove-rectangle {
+    50% {
+      opacity: 0;
+    }
+    51% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    71% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 0;
+    }
+    91% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes myanimate-remove-rectangle {
+    50% {
+      opacity: 0;
+    }
+    51% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    71% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 0;
+    }
+    91% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes myanimate-left-square {
+    10% {
+      width: 0;
+      height: 0;
+    }
+    20% {
+      width: 120%;
+      height: 120%;
+    }
+    21% {
+      width: 100%;
+      height: 100%;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @keyframes myanimate-left-square {
+    10% {
+      width: 0;
+      height: 0;
+    }
+    20% {
+      width: 120%;
+      height: 120%;
+    }
+    21% {
+      width: 100%;
+      height: 100%;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @-webkit-keyframes myanimate-right-square {
+    30% {
+      width: 0;
+      height: 0;
+    }
+    40% {
+      width: 120%;
+      height: 120%;
+    }
+    41% {
+      width: 100%;
+      height: 100%;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @keyframes myanimate-right-square {
+    30% {
+      width: 0;
+      height: 0;
+    }
+    40% {
+      width: 120%;
+      height: 120%;
+    }
+    41% {
+      width: 100%;
+      height: 100%;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @-webkit-keyframes myanimate-rectangle {
+    50% {
+      width: 0;
+      height: 0;
+    }
+    60% {
+      width: 120%;
+      height: 120%;
+    }
+    61% {
+      width: 100%;
+      height: 100%;
+    }
+    70% {
+      width: 100%;
+      height: 100%;
+    }
+    80% {
+      width: 0%;
+      height: 0%;
+    }
+    90% {
+      width: 0%;
+      height: 0%;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @keyframes myanimate-rectangle {
+    50% {
+      width: 0;
+      height: 0;
+    }
+    60% {
+      width: 120%;
+      height: 120%;
+    }
+    61% {
+      width: 100%;
+      height: 100%;
+    }
+    70% {
+      width: 100%;
+      height: 100%;
+    }
+    80% {
+      width: 0%;
+      height: 0%;
+    }
+    90% {
+      width: 0%;
+      height: 0%;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @-webkit-keyframes myanimate-add-left-square {
+    10% {
+      opacity: 0;
+    }
+    11% {
+      opacity: 1;
+    }
+    13% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes myanimate-add-left-square {
+    10% {
+      opacity: 0;
+    }
+    11% {
+      opacity: 1;
+    }
+    13% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes myanimate-add-right-square {
+    30% {
+      opacity: 0;
+    }
+    31% {
+      opacity: 1;
+    }
+    33% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes myanimate-add-right-square {
+    30% {
+      opacity: 0;
+    }
+    31% {
+      opacity: 1;
+    }
+    33% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes myanimate-add-rectangle {
+    50% {
+      opacity: 0;
+    }
+    51% {
+      opacity: 1;
+    }
+    53% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 0;
+    }
+    91% {
+      opacity: 1;
+    }
+    93% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes myanimate-add-rectangle {
+    50% {
+      opacity: 0;
+    }
+    51% {
+      opacity: 1;
+    }
+    53% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 0;
+    }
+    91% {
+      opacity: 1;
+    }
+    93% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}

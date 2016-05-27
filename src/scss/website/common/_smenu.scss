@@ -1,0 +1,44 @@
+$btn_menu_analytics_nomal: -5px -5px 80px 80px;
+$btn_menu_appfaqs_nomal: -95px -5px 80px 80px;
+$btn_menu_appissues_nomal: -185px -5px 80px 80px;
+$btn_menu_appsettings_nomal: -275px -5px 80px 80px;
+$btn_menu_cloudconfig_nomal: -365px -5px 80px 80px;
+$btn_menu_clouddata_nomal: -455px -5px 80px 80px;
+$btn_menu_push_nomal: -545px -5px 80px 80px;
+$btn_menu_segments_nomal: -635px -5px 80px 80px;
+
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 3);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 4);
+}
+
+@function sprite-width($sprite) {
+  @return nth($sprite, 3);
+}
+
+@function sprite-height($sprite) {
+  @return nth($sprite, 4);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 1);
+  $sprite-offset-y: nth($sprite, 2);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite($sprite) {
+  @include sprite-position($sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+.smenu {
+  background-image: url('../images/sprites/smenu.png');
+}
+

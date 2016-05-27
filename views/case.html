@@ -1,0 +1,34 @@
+<% include website/var.html %>
+<% pageName="case" %>
+
+<!doctype html>
+<html>
+<head>
+    <title>案例——真旺云应用平台</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="<%= relativePath %>/stylesheets/case.css" />
+
+    <% include website/header.html %>
+
+            <div class="casebg">
+                <div>案例展示</div>
+            </div>
+            <% include components/case1.html %>
+            <div class="clearfix"></div>
+            <% include components/case2.html %>
+            <div class="clearfix"></div>
+            <% include components/case3.html %>
+            <div class="clearfix"></div>
+            <% include components/case4.html %>
+            <div class="clearfix"></div>
+            <% include components/case5.html %>
+            <div class="clearfix"></div>
+            <div id="case" class="mainStyle">
+
+            </div>
+
+        <% include website/footer.html %>
+        <script src='<%= relativePath %>/javascript/website/case.js'></script>
+    </body>
+
+    </html>

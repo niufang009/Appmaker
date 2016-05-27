@@ -1,0 +1,243 @@
+//Common
+
+.fixed-top{
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+.abs-top{
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+}
+
+$headerHeight:90px;
+$m-righter-wd:50px;
+
+//PC
+@media (min-width: $mobile-break-point) { 
+  body{
+    min-width: 1000px;
+  }
+  #mobile-top,#mobile-righter{
+    display: none;
+  }
+
+  #header{
+    &.floating{
+      background: rgba(255,255,255,0.85);
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+      .divider{
+        background: rgba(0,0,0,0.1);
+      }
+      #navbar > li{
+        a{
+          color: #000;
+        }
+      }
+    }
+
+    transition:background 0.5s;
+    -webkit-transition:background 0.5s;
+    width:100%;
+    height: $headerHeight;
+
+    #header-logo{
+      >a{
+        line-height: $headerHeight - 10px;
+        text-decoration: none;
+        img{
+          width: 380px;
+          vertical-align: middle;
+        }
+      }
+      display: inline;
+    }
+
+
+    #navbar > li{
+      margin-right: 27px;
+      position: relative;
+      display: inline-block;
+      &:last-child{
+        margin-right:0px;
+      }
+      &.active{
+        a{
+          color:$main-blue;
+          font-weight: bold;
+        }
+      }
+      a{
+        font-size: 14px;
+        color: #fff;
+        display: inline-block;
+        &:hover{
+          color:$main-blue;
+        }
+      }
+
+      >div.dropdown{
+        top:70px;
+        width: 100%;
+        /*display: none;*/
+        visibility: hidden;
+        position: absolute;
+
+        .icon-wrapper{
+          width: 100%;
+          z-index:10;
+          text-align: center;
+          position: absolute;
+          line-height:0px;
+          .center-icon{
+            display: inline-block;
+            width: 20px;
+            height: 10px;
+            /*background: url("");*/
+          }
+        }
+
+        ul{
+          z-index: 9;
+          padding: 12px 26px;
+          border-radius: 6px;
+          border:$main-border;
+          background: $header-dropdown-bg;
+          position: absolute;
+          li{
+            list-style: none;
+            white-space: nowrap;//important
+            line-height: 35px;
+            font-size: 14px;
+            &.active{
+              a{
+                font-weight: bold;
+                color:$main-blue;
+              }
+            }
+            a{
+              color: #fff;
+              &:hover{
+                color:$main-blue;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #navbar {
+      float: right;
+      display: inline;
+      line-height: $headerHeight;
+    }
+  }
+
+}
+
+//mobile
+@media (max-width: $mobile-break-point - 1) { 
+
+  #QIAO_INVITE_CONTAINER{
+    display: none!important;
+  }
+
+  .mainStyle{
+      width:100%!important;
+      margin:0 auto!important;
+  }
+
+  #righter,#header{
+    display: none;
+  }
+
+  #mobile-top{
+    padding: 10px 0px;
+    text-align: center;
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid #cccccc;
+    #mobile-navbar{
+      padding: 10px 0px 30px 0px;
+      background: #efeff4;
+      position: absolute;
+      top:101%;
+      width: 100%;
+      z-index: 999;
+      display: none;
+      >li{
+        position: relative;
+        display: block;
+        width: 30%;
+        margin: 0 auto;
+        transition: 0.2s ;
+        -webkit-transition: 0.2s ;
+        border-bottom: 1px solid #e0e0e6;
+        height: 70px;
+        opacity: 1;
+        left: 0%;
+        &.ready{
+          opacity: 0.1; 
+          left:-80%;
+        }
+        &:last-child{
+          border-bottom: none;
+        }
+        &.active{
+          a{
+            color:$main-blue;
+            font-weight: bold;
+          }
+        }
+        a{
+          opacity: 1;
+          font-size: 1.1rem;
+          color: #606062;
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          line-height: 80px;
+
+          &:hover{
+            color:$main-blue;
+          }
+        }
+      }
+    }
+    #mobile-nav-control{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        i{
+          transition:background 0.5s;
+          -webkit-transition:background 0.5s;
+          background: url("../images/website/nav-control.png") no-repeat;
+          background-position: 3px 5px;
+          background-size: 48px; 
+          width: 24px;
+          height: 24px;
+          display: inline-block;
+          margin: 0 auto;
+          vertical-align: middle;
+        }
+        display: block;
+        height: 100%;
+        width: 15%;
+        &.hide{
+          i{
+            background-position: -25px 5px;
+          }
+        }
+    }
+    img{
+      width: 40%;
+    }
+  }
+
+
+}
+
+
+

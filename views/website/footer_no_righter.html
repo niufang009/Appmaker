@@ -1,0 +1,66 @@
+
+<div class="bottomline"></div>
+<div id="footer" class="mainStyle" <%= pageName === "login&regist" ? "style=display:none" : "" %> >
+
+    <div id="goTop">
+        <img src="<%= relativePath %>/images/website/goTop.png" width="50" />
+    </div>
+
+  <div class="address" >
+    <div><img src="<%= relativePath %>/images/website/sColorLogo.png" width="145" /></div>
+    <div class="text start"> 上海徐汇区宜山路888号新银大厦21层 </div>
+    <div class="text end"> 咨询电话：400-804-5550 </div>
+    <div class="netMedia"> 
+      <a class="" href="http://weibo.com/maxleap" >
+        <img src="<%= relativePath %>/images/website/weibo.png" width="45">
+      </a>
+      <a style="position:relative">
+        <img onmouseover="javascript:{$(this).next().fadeIn(100) }" onmouseout="javascript:{$(this).next().fadeOut(100) }" src="<%= relativePath %>/images/website/wechat.png" width="45">
+        <img class="wechatQr" src="<%= relativePath %>/images/website/wechatQRcode.png" />
+      </a>
+    </div>
+  </div>
+  <div class="websiteMap" >
+    <ul class="end">
+      <li class="head">真旺云</li>
+      <li><a href='javascript:{ window.location.href = "http://" + window.location.host + "/" + window.location.search }'>首页</a></li>
+      <li><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/ourproduct" + window.location.search }'>产品中心</a></li>
+      <li><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/case" + window.location.search }'>案例展示</a></li>
+      <li><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/cowork" + window.location.search }'>渠道合作</a></li>
+      <li><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/aboutus" + window.location.search }'>关于我们</a></li>
+      <li><a href='<%= loginLink %>'>登录/注册</a></li>
+    </ul>
+    <ul >
+      <li class="head">合作伙伴</li>
+      <li><a target="_blank" href='http://aws.amazon.com/'>亚马逊AWS</a></li>
+      <li><a target="_blank" href='http://www.hwclouds.com/'>华为云</a></li>
+      <li><a target="_blank" href='http://www.azure.cn/'>Azure</a></li>
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<div class="copyRight <%= pageName === "login&regist" ? "floating" : "" %>" >Copyright © 2016 MaxMon. All Rights reserved. 沪ICP备15041312号-2</div>
+
+<script src='<%= relativePath %>/javascript/lib/jquery/jquery.min.js'></script>
+<script src='<%= relativePath %>/javascript/lib/Swiper/swiper2.min.js'></script>
+<script src='<%= relativePath %>/javascript/website/common/init.js'></script>
+
+<script>
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    var trackingid;
+    switch(window.location.hostname){
+        case "app.maxapps.cn" : trackingid = "UA-70747550-3";break;
+        case "www.maxapps.cn" : trackingid = "UA-70747550-6";break;
+        default : trackingid = "UA-70747550-5";break;
+    }
+
+    ga('create', trackingid , 'auto');
+    ga('send', 'pageview');
+
+</script>

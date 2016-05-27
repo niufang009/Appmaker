@@ -1,0 +1,71 @@
+  <div id="mobile-righter" >
+      <div class="cubes">
+
+          <div class="cube head" >
+              <p>　</p>
+          </div>
+          <div class="visiblecubes" style="display:none">
+              <div class="cube qq" onclick='javascript:{window.open("http://wpa.qq.com/msgrd?v=3&uin=3115292289&site=qq&menu=yes")}' >
+                  <img class="sicon support" src="<%= relativePath %>/images/website/right-qq.png">
+                  <p>在线客服</p>
+              </div>
+              <div class="cube" onclick='javascript:{ 
+                    try{
+                      $("#QIAO_ICON_CONTAINER")[0].click();
+                    } catch(e){
+                      window.open( $("#QIAO_ICON_CONTAINER").attr("href") );
+                    } 
+                }'>
+                  <img class="sicon price" src="<%= relativePath %>/images/website/right-rmb.png">
+                  <p>报价咨询</p>
+              </div>
+              <a class="cube" href="tel:400-804-5550" onclick="javascript:void(0)">
+                  <img class="sicon tel" src="<%= relativePath %>/images/website/right-tel.png">
+                  <p>电话咨询</p>
+                  <!-- <div class="phone400">400-804-5550</div> -->
+              </a>
+              <div class="cube" onclick='<%= postLink %>' >
+                  <img class="sicon login" src="<%= relativePath %>/images/website/right-signin.png">
+                  <p >注册</p>
+              </div>
+              <div class="cube holder" >
+                  <p>　</p>
+              </div>
+          </div>
+          <div class="cube foot" ></div>
+      </div>   
+      <div id="righter-control" tab-index="-1" class="hide">         
+          <img src="<%= relativePath %>/images/website/header-control.png" width="30%">
+      </div>
+  </div>
+
+  <div id="righter" >
+      <div class="cube" onclick='javascript:{window.open("http://wpa.qq.com/msgrd?v=3&uin=3115292289&site=qq&menu=yes")}' >
+          <div class="sicon support"></div>
+          <p>在线客服</p>
+      </div>
+      <div class="cube" onclick='javascript:{ $("#qiao-icon-group1")[0].click() }'><div class="sicon price"></div><p>报价咨询</p></div>
+      <div class="cube" >
+          <div class="sicon tel"></div>
+          <p>电话咨询</p>
+          <div class="phone400">400-804-5550</div>
+      </div>
+      <div class="cube" onclick='<%= postLink %>' >
+      <div class="sicon login"></div><p >注册</p></div>
+  </div>
+
+<% include ./footer_no_righter.html %>
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F88346f1b2c10f06fadc90fd5cfad5786' type='text/javascript'%3E%3C/script%3E"))
+</script>
+
+<!--<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9e77a5e78f320933d8149380a3e6c7ff";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>-->

@@ -1,0 +1,43 @@
+$icon_analytics: -5px -5px 74px 148px;
+$icon_cloudconfig: -89px -5px 74px 148px;
+$icon_faq: -173px -5px 74px 148px;
+$icon_filesstorage: -257px -5px 74px 148px;
+$icon_pushnotifications: -341px -5px 74px 148px;
+$icon_segments: -425px -5px 74px 148px;
+$icon_down: -509px -5px 89px 89px;
+
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 3);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 4);
+}
+
+@function sprite-width($sprite) {
+  @return nth($sprite, 3);
+}
+
+@function sprite-height($sprite) {
+  @return nth($sprite, 4);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 1);
+  $sprite-offset-y: nth($sprite, 2);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite($sprite) {
+  @include sprite-position($sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+.sicon {
+  background-image: url('../images/sprites/sprite.png');
+}
+

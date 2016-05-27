@@ -1,0 +1,94 @@
+@import "./website/common/_var.scss";
+@import "./website/common/header.scss";
+@import "./website/common/footer.scss";
+@import "./website/common/_kit.scss";
+@import "./website/common/_reset.scss";
+//PC
+@media (min-width: $mobile-break-point) {
+    body {
+        background-color: #fff;
+        font-size: 100%;
+    }
+    .aboutusbg {
+        width: 100%;
+        height: 390px;
+        background-image: url("../images/website/aboutus/bg_aboutus.jpg");
+        background-size: cover;
+    }
+    .aboutus_title {
+        padding-top: 210px;
+    }
+    .aboutus_title div {
+        font-size: 34px;
+        color: #fff;
+    }
+    .aboutus_title span {
+        font-size: 20px;
+        color: #ccc;
+    }
+    #aboutus {
+        h2 {
+            margin-top: 60px;
+        }
+        .aboutus_detail {
+            font-size: 15px;
+            margin-top: 30px;
+            color: #6b6b6b;
+            line-height: 28px;
+        }
+        .aboutus_detail:nth-of-type(1) {
+            margin-top: 20px;
+        }
+        .aboutusperson_detail {
+            font-size: 15px;
+            margin-top: 20px;
+            color: #6b6b6b;
+            line-height: 28px;
+        }
+    }
+}
+//mobile
+@media (max-width: $mobile-break-point - 1) {
+    
+    .aboutusbg{
+        width: 100%;
+        height: 227px;
+        background-image: url("../images/website/aboutus/aboutusmobilebg.jpg");
+        background-size: cover;
+        
+        & > div{
+            padding-top: 100px;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+        .aboutus_title{
+            font-weight: 600;
+        }
+    }
+    
+    #aboutus {
+        padding: 0 25px;
+       h2{
+           font-size: 1.2rem;
+           margin-top: 40px;
+       }
+       .aboutus_detail{
+           font-size: .9rem;
+           line-height: 1.6rem;
+           margin-top: 10px;
+       }
+       .aboutus_detail:nth-of-type(1){
+           margin-top: 10px;
+       }
+       
+       .aboutusperson_detail{
+           font-size: .9rem;
+           line-height: 1.6rem;
+           margin-top: 10px;
+       }
+       a{
+           color: #000;
+       }
+    }
+}

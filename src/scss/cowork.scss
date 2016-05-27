@@ -1,0 +1,355 @@
+@import "./website/common/_var.scss";
+@import "./website/common/header.scss";
+@import "./website/common/footer.scss";
+@import "./website/common/_kit.scss";
+@import "./website/common/_reset.scss"; //PC
+$cowork_reg_btn: #3399ff;
+@media (min-width: $mobile-break-point) {
+    body {
+        background-color: #fff;
+        font-size: 100%;
+    }
+    .coworkbg {
+        width: 100%;
+        height: 390px;
+        background-image: url("../images/website/cowork/bg_cowork.jpg");
+        background-size: cover;
+    }
+    .cowork_title {
+        padding-top: 210px;
+    }
+    .cowork_title div {
+        font-size: 34px;
+        color: #333333;
+    }
+    .cowork_title span {
+        font-size: 20px;
+        font-weight: 100;
+        color: #666666;
+    }
+    .cowork-none{
+        display: none;
+    }
+    #cowork {
+        .cowork_detail {
+            margin-top: 80px;
+        }
+        .cowork_detail > div > h2 {
+            line-height: 60px;
+            font-size: 20px;
+        }
+        .cowork_detail > div {
+            width: 490px;
+            height: 160px;
+            padding-right: 30px;
+            margin-top: 30px;
+            float: left;
+        }
+        .cowork_detail > div > div {
+            line-height: 28px;
+            color: #000;
+        }
+        .cowork_conditions {
+            margin-top: 45px;
+        }
+        .cowork_conditions > div {
+            margin-top: 15px;
+            line-height: 28px;
+            color: #6b6b6b;
+        }
+        .cowork_support {
+            margin-top: 60px;
+        }
+        .cowork_line > div {
+            float: left;
+        }
+        .cowork_line > .cowork_lineh {
+            height: 24px;
+            width: 150px;
+            border-bottom: 2px solid #ececec;
+            &.short {
+                width: 390px;
+            }
+        }
+        .cowork_line > .cowork_linefont {
+            width: 680px;
+            height: 60px;
+            text-align: center;
+            line-height: 46px;
+            font-size: 34px;
+            font-weight: 100;
+            color: #333;
+            &.short {
+                width: 200px;
+            }
+        }
+        .cowork_line > .cowork_processline {
+            font-size: 30px;
+            color: #000;
+        }
+        .cowork_supdetail {
+            height: 150px;
+            margin-top: 15px;
+            &>div {
+                float: left;
+            }
+        }
+        .cowork_supdetail > .cowork_supdetail1 {
+            width: 170px;
+            height: 130px;
+        }
+        .cowork_supdetail > .cowork_supdetail1 img {
+            width: 73px;
+            height: 88px;
+            margin-top: 20px;
+        }
+        .cowork_supdetail > .cowork_supdetail2 > div {
+            margin-top: 15px;
+            line-height: 28px;
+            color: #6b6b6b;
+        }
+        .cowork_supdetail > .cowork_supdetail12 img {
+            margin-top: 10px;
+        }
+        .cowork_process > .cowork_prosteps {
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .cowork_process > .cowork_prosteps > .cowork_pro > .cowork_pronum > div {
+            float: left;
+        }
+        .cowork_process > .cowork_prosteps > .cowork_pro > .cowork_pronum >.cowork_pronum1 {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #3399ff;
+            border-radius: 30px;
+            font-size: 36px;
+            line-height: 60px;
+            text-align: center;
+            color: #3399ff;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        .cowork_process > .cowork_prosteps > .cowork_pro > .cowork_pronum >.cowork_pronum2 {
+            width: 170px;
+            height: 20px;
+            background-image: url("../images/website/cowork/cowork_jt.png");
+            background-size: 10% 100%;
+            margin: 20px 0 0 10px;
+        }
+        .cowork_process > .cowork_prosteps > .cowork_pro {
+            width: 245px;
+            float: left;
+        }
+        .cowork_process > .cowork_prosteps > .cowork_pro > .cowork_prodetail {
+            padding-left: 15px;
+            height: 120px;
+            border-left: 1px solid #ccc;
+            margin-top: 15px;
+        }
+        .cowork_process > .cowork_prosteps > .cowork_pro > .cowork_prodetail > h3 {}
+        .cowork_process > .cowork_prosteps > .cowork_pro > .cowork_prodetail > div {
+            line-height: 28px;
+            color: #000000;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+        .coworkbg_entity {
+            background: url()!important;
+        }
+        .cowork_reg {
+            margin-top: 80px;
+            margin-bottom: 100px;
+        }
+        .cowork_reg center a {
+            background-color: $cowork_reg_btn;
+            color: #fff;
+            padding: 26px 50px;
+            border-radius: 40px;
+            font-size: 24px;
+            font-weight: bold;
+            &:hover {
+                background-color: darken($cowork_reg_btn,8%);
+            }
+        }
+    }
+}
+//mobile
+@media (max-width: $mobile-break-point - 1) {
+    .coworkbg {
+        width: 100%;
+        height: 227px;
+        background-image: url("../images/website/cowork/coworkmobilebg.jpg");
+        background-size: cover;
+        & > div {
+            padding-top: 65px;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+        .cowork_title{
+            font-weight: 600;
+        }
+    }
+    #cowork {
+        .cowork_detail {
+            padding: 0 25px;
+            h2 {
+                font-size: 1.2rem;
+                margin-top: 30px;
+            }
+            > div >div {
+                font-size: 0.9rem;
+                line-height: 1.6rem;
+                margin-top: 3px;
+            }
+        }
+        .cowork_conditions {
+            padding: 0 25px;
+            h2 {
+                font-size: 1.1rem;
+            }
+            font-size: 0.9rem;
+            line-height: 1.6rem;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .cowork_support {
+            padding: 15px 25px;
+            background-color: #f2f2f2;
+            .cowork_line {
+                margin: 30px 0;
+                display: flex;
+                display: -webkit-flex ;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                .cowork_linefont {
+                    font-size: 1.4rem;
+                    text-align: center;
+                    padding: 0 5px;
+                }
+                .cowork_lineh {
+                    border-bottom: 1px solid #ccc;
+                    height: 1px;
+                    width: 20%;
+                }
+            }
+            .cowork_supdetail {
+                margin: 20px 0;
+                display: flex;
+                display: -webkit-flex ;
+                .cowork_supdetail1 {
+                    width: 25%;
+                    img {
+                        width: 65%;
+                    }
+                }
+                .cowork_supdetail2 {
+                    width: 75%;
+                    h3 {
+                        font-size: 1rem;
+                        line-height: 30px;
+                    }
+                    div {
+                        font-size: 0.9rem;
+                        line-height: 1.6rem;
+                    }
+                }
+            }
+        }
+        .cowork_process {
+            .cowork_line {
+                margin: 40px 0 10px 0;
+                display: flex;
+                display: -webkit-flex ;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                .cowork_linefont {
+                    font-size: 1.4rem;
+                    padding: 0 8px;
+                }
+                .cowork_lineh {
+                    border-bottom: 1px solid #ccc;
+                    height: 1px;
+                    width: 30%;
+                }
+            }
+            .cowork_prosteps {
+                .cowork_pro {
+                    display: flex;
+                    display: -webkit-flex ;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    .cowork_pronum {
+                        width: 25%;             
+                        display: flex;
+                        position: relative;
+                        display: -webkit-flex ;
+                        flex-direction: column;       
+                        align-items: center;
+                        .cowork_pronum1 {
+                            margin: 0 auto;
+                            width: 50px;
+                            height: 50px;
+                            border: 1px solid #3399ff;
+                            border-radius: 25px;
+                            font-size: 1rem;
+                            line-height: 50px;
+                            text-align: center;
+                            color: #3399ff;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                        }
+                        .cowork_pronum2{
+                            background-image: url("../images/website/cowork/cowork_jtx.png");
+                            background-size: 100% 10px;
+                            position: absolute;
+                            left: 50%;
+                            width: 15px;
+                            height: 40px;
+                            margin-top: 8px;
+                             margin-left: -7px;
+                             top: 100%;
+
+                        }
+                        .coworkbg_entity {
+                            background: url()!important;
+                        }
+                    }
+                    .cowork_prodetail {
+                        width: 56%;
+                        padding-left: 15px;
+                        border-left: 1px solid #ccc;
+                        margin: 20px 0;
+                        h3 {
+                            font-size: 1rem;
+                        }
+                        div {
+                            font-size: 0.9rem;
+                            line-height: 1.5rem;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .cowork_reg {
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+        .cowork_reg center a {
+            background-color: $cowork_reg_btn;
+            color: #fff;
+            padding: 0.9rem 1.8rem;
+            border-radius: 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            &:hover {
+                background-color: darken($cowork_reg_btn,8%);
+            }
+        }
+    }
+}

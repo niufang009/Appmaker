@@ -1,0 +1,383 @@
+@import "./website/common/_var.scss";
+@import "./website/common/header.scss";
+@import "./website/common/footer.scss";
+@import "./website/common/_kit.scss";
+@import "./website/common/reset.scss";
+
+$login-btn-bc:#3399ff;
+$jump-btn-bc:#66cc33;
+$post-btn-bc:#66cc33;
+$error-color:#ff3131;
+
+body{
+    visibility: hidden;
+}
+
+.error-promote{
+    position: absolute;
+    color: $error-color;
+    font-size: 12px;
+    top: 102%;
+}
+
+@mixin btncommon{
+    border-radius: 4px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+}
+
+.checkbox-inline{
+    display: inline-block;
+    user-select:none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+
+    span{
+        vertical-align: bottom;
+        cursor: pointer;
+    }
+    .icon{
+        border-radius: 1px;
+        background: url("../images/website/login/checkbox.png") no-repeat #fff;
+        background-size: 30px 15px;
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        vertical-align: bottom;
+        &.unchecked{
+            background-position: -15px 0px;
+        }
+        &.checked{
+            background-position: 0px 0px;
+        }
+    }
+}
+
+
+//PC
+@media (min-width: $mobile-break-point) {
+
+    #loginContent{
+        background:url('../images/website/login/login-bg.jpeg') #eaeaea ;
+        background-size:cover;
+        height:800px;
+        text-align:center;
+        white-space: nowrap;
+    }
+    .register-title{
+        .tips{
+            display:inline-block;
+            vertical-align:middle;
+            text-align:left;
+            .tip-title{
+                height:28px;
+                font-size:16px;
+                color:#000;
+                font-weight:bold;
+            }
+            .tip-content{
+                font-size:12px;
+                color:#000;
+            }
+        }
+
+        >a{
+            &:hover{
+                opacity:0.6;
+                filter:alpha(opacity=60);
+            };
+        }
+    }
+    .typeSelector{
+        text-align: left;
+        .checkbox-inline{
+            font-size: 14px;
+            margin-right: 44px;
+            color:#333;
+            &.end{
+                margin-right: 0px;
+            }
+        }
+    }
+    .whichType{
+      position:relative;
+      height:60px;
+      text-align:center;
+      font-size: 0px;
+      .grayLine{
+        border-bottom:1px solid #333;
+        width:25%;
+        display:inline-block;
+        vertical-align:middle;
+      }
+      .content{
+        width:50%;
+        height:30px;
+        color: #333;
+        font-size: 16px;
+        line-height: 30px;
+        overflow:visible;
+        display:inline-block;
+        vertical-align:middle;
+        text-align:center;
+      }
+    }
+
+    .input-wrapper{
+        text-align: left;
+        width: 270px;
+        position: relative;
+        margin: 0 auto;
+        &.error{
+            >input{
+                border: 1px solid $error-color!important;
+            }
+        }
+        .labels{
+            line-height:28px;
+            font-size:16px;
+        }
+        .input-tips{
+            font-size:12px;
+            color:#000;
+            text-align:left;
+        }
+        >input{
+            width: 100%;
+            height: 40px;
+            border-radius: 4px;
+            font-size: 14px;
+            background:#fff;
+            padding-left:12px;
+            &[type=password]{
+                font-size: x-large;
+            }
+            &:focus{
+                background:#fff;
+                border:1px solid #3399ff;
+            }
+        }
+        >span{
+            font-weight: bold;
+            font-size: 14px;
+            color: #333;
+        }
+    }
+    .login-content{
+        margin-top:90px;
+        &.leftBigImage{
+            height:100%;
+            width:600px;
+            text-align:center;
+        }
+        &.rightInputs{
+            #login,#register{
+                width:100%;
+                display:none;
+            }
+            width: 280px;
+        }
+    }
+    #register-content,.login-content{
+        text-align:center;
+        vertical-align:middle;
+        display: inline-block;
+    }
+    .logreg_title{
+        margin-bottom: 35px;
+        color: #333;
+        text-align: right;
+        font-size: 16px;
+        &.left{
+            text-align: left;
+        }
+    }
+    .goindexBtn{
+        @include btncommon();
+        background:$jump-btn-bc;
+        width: 160px;
+        &:hover{
+            background:darken($jump-btn-bc,8%);
+        };
+    }
+    .jumpBtn{
+        width: 100%;
+        @include btncommon();
+        background:$jump-btn-bc;
+        &:hover{
+            background:darken($jump-btn-bc,8%);
+        };
+    }
+    .postBtn{
+        @include btncommon();
+        width: 200px;
+        background: $post-btn-bc;
+        &:hover{
+            background:darken($post-btn-bc,8%);
+        };
+    }
+    .loginBtn{
+        @include btncommon();
+        width: 110px;
+        background: $login-btn-bc;
+        &:hover{
+            background:darken($login-btn-bc,8%);
+        };
+    },
+    .postBtn-loading{
+        @include btncommon();
+        width: 110px;
+        background: lighten($post-btn-bc,10%);
+        cursor: not-allowed;
+        display: none;
+    }
+    .loginBtn-loading{
+        @include btncommon();
+        width: 110px;
+        background: lighten($login-btn-bc,10%);
+        cursor: not-allowed;
+        display: none;
+    }
+
+}
+
+//mobile
+@media (max-width: $mobile-break-point - 1) { 
+    #loginContent{
+        background:url('../images/website/login/login-bg.jpeg') no-repeat #eaeaea ;
+        background-size:cover;
+        text-align:center;
+        white-space: nowrap;
+        background-position: -330px;
+        overflow: hidden;
+    }
+    .login-content{
+        &.leftBigImage{
+            display: none;
+        }
+        &.rightInputs{
+            width: 80%;
+            margin: 0 auto;
+            #login{
+                display: none;
+            }
+            #register{
+                width: 100%;
+                .register-title{
+                    text-align: center;
+                    margin-top: 20px;
+                    .tips{
+                        display:inline-block;
+                        vertical-align:middle;
+                        text-align:center;
+                        .tip-title{
+                            font-size:1.6rem;
+                            color:#333;
+                            font-weight:bold;
+                        }
+                        .tip-content{
+                            margin-top: 12px;
+                            font-size:1.2rem;
+                            color:#333;
+                        }
+                    }
+                    >a,>.divider{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+    .typeSelector{
+        text-align: left;
+        overflow: hidden;
+        font-size: 0px;
+        .checkbox-inline{
+            font-size: 1.2rem;
+            width: 33.3%;
+            color:#333;
+            &.center{
+                text-align: center;
+            }
+            &.end{
+                text-align: right;
+            }
+            span{
+                vertical-align: middle;
+            }
+        }
+    }
+    .whichType{
+        .content{
+            margin: 0px 0px 20px 0px;
+            color: #666666;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+    }
+    .input-wrapper{
+        text-align: left;
+        position: relative;
+        width: 100%;
+        color: #666666;
+        &.error{
+            >input{
+                border: 1px solid $error-color!important;
+            }
+        }
+        &.bottom{
+            padding-bottom: 80px;
+        }
+        .labels{
+            font-weight: bold;
+            line-height:28px;
+            font-size:1.4rem;
+        }
+        .input-tips{
+            font-size:12px;
+            color:#666;
+            text-align:left;
+        }
+        input{
+            width: 100%;
+            height: 50px;
+            border-radius: 4px;
+            font-size: 14px;
+            background:#fff;
+            padding-left:12px;
+            border:1px solid #666666;
+            &:focus{
+                background:#fff;
+                border:1px solid #3399ff;
+            }
+        }
+    }
+    .postBtn{
+        @include btncommon();
+        width: 200px;
+        background: $post-btn-bc;
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+    .goindexBtn{
+        @include btncommon();
+        background:$jump-btn-bc;
+        width: 160px;
+    }
+    .postBtn-loading{
+        @include btncommon();
+        width: 110px;
+        background: lighten($post-btn-bc,10%);
+        cursor: not-allowed;
+        display: none;
+    }
+}
+
+
+

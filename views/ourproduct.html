@@ -1,0 +1,324 @@
+<% include website/var.html %>
+    <%  ec = 'javascript:{ window.location.href = "http://" + window.location.host + "/website/a1" + window.location.search }' 
+        sns ='javascript:{ window.location.href = "http://" + window.location.host + "/website/a2" + window.location.search }' 
+        service ='javascript:{ window.location.href = "http://" + window.location.host + "/website/a3" + window.location.search }' 
+        edu ='javascript:{ window.location.href = "http://" + window.location.host + "/website/a4" + window.location.search }' 
+        catering ='javascript:{ window.location.href = "http://" + window.location.host + "/website/a5" + window.location.search }' 
+    %>
+    <% pageName="product" %>
+        <!doctype html>
+        <html>
+
+        <head>
+            <title>产品中心——真旺云应用平台</title>
+            <meta name="description" content="">
+            <link rel="stylesheet" href="<%= relativePath %>/stylesheets/product.css" />
+
+            <% include website/header.html %>
+            <div class="pc-none product-modal"></div>
+            <% include components/productheader.html %>
+
+                <div class="clearfix"></div>
+                <div class="product-header">
+                    <h2 class="plat-name">真旺云<br>助力移动全网营销</h2>
+                    <p class="plat-introduce"></p>
+                    <p class="plat-introduce"></p>
+                    <i class="left-decoration"></i>
+                    <i class="right-decoration"></i>
+                </div>
+                <div class="product_bg">
+                    <div class="fields-display">
+                        <div class="field online-shop">
+                            <div class="text-show">
+                                <div class="introduction">
+                                    <h3><a href='<%= ec %>'>电商</a></h3>
+                                    <p class="unit-word">行业解决方案</p>
+                                    <p class="englisth-corresponding"></p>
+                                </div>
+                                <ul class="categories">
+                                    <li onclick="<%= ec %>">商铺展示</li>
+                                    <li onclick="<%= ec %>">O2O服务</li>
+                                    <li onclick="<%= ec %>">在线交易</li>
+                                    <li onclick="<%= ec %>">客户管理</li>
+                                    <li onclick="<%= ec %>">消息推送</li>
+                                    <li onclick="<%= ec %>">营销活动</li>
+                                </ul>
+                            </div>
+                            <div class="img-decoration"></div>
+                        </div>
+                        <div class="field im">
+                            <div class="text-show">
+                                <div class="introduction">
+                                    <h3><a href='<%= sns %>'>社交</a></h3>
+                                    <p class="unit-word">行业解决方案</p>
+                                    <p class="englisth-corresponding"></p>
+                                </div>
+                                <ul class="categories">
+                                    <li onclick="<%= sns %>">即时通讯</li>
+                                    <li onclick="<%= sns %>">实时语音</li>
+                                    <li onclick="<%= sns %>">社区论坛</li>
+                                    <li onclick="<%= sns %>">视频互动</li>
+                                    <li onclick="<%= sns %>">在线客服</li>
+                                    <li onclick="<%= sns %>">社交圈</li>
+                                </ul>
+                            </div>
+                            <div class="img-decoration"></div>
+                        </div>
+                        <div class="field service">
+                            <div class="text-show">
+                                <div class="introduction">
+                                    <h3><a href='<%= service %>'>服务</a></h3>
+                                    <p class="unit-word">行业解决方案</p>
+                                    <p class="englisth-corresponding"></p>
+                                </div>
+                                <ul class="categories">
+                                    <li onclick="<%= service %>">在线预约时间</li>
+                                    <li onclick="<%= service %>">效果预览</li>
+                                    <li onclick="<%= service %>">咨询管理</li>
+                                    <li onclick="<%= service %>">社区交流平台</li>
+                                    <li onclick="<%= service %>">地图导航</li>
+                                    <li onclick="<%= service %>">会员管理</li>
+                                </ul>
+                            </div>
+                            <div class="img-decoration"></div>
+                        </div>
+                        <div class="field edu">
+                            <div class="text-show">
+                                <div class="introduction">
+                                    <h3><a href='<%= edu %>'>教育</a></h3>
+                                    <p class="unit-word">行业解决方案</p>
+                                    <p class="englisth-corresponding"></p>
+                                </div>
+                                <ul class="categories">
+                                    <li onclick="<%= edu %>">课程展示</li>
+                                    <li onclick="<%= edu %>">线上课件</li>
+                                    <li onclick="<%= edu %>">在线答题</li>
+                                    <li onclick="<%= edu %>">预约上课</li>
+                                    <li onclick="<%= edu %>">学生信息管理</li>
+                                    <li onclick="<%= edu %>">音视频教学</li>
+                                </ul>
+                            </div>
+                            <div class="img-decoration"></div>
+                        </div>
+                        <div class="field eat">
+                            <div class="text-show">
+                                <div class="introduction">
+                                    <h3><a href='<%=catering%>'>餐饮</a></h3>
+                                    <p class="unit-word">行业解决方案</p>
+                                    <p class="englisth-corresponding"></p>
+                                </div>
+                                <ul class="categories">
+                                    <li onclick="<%= catering %>">餐厅介绍</li>
+                                    <li onclick="<%= catering %>">用餐点评</li>
+                                    <li onclick="<%= catering %>">美食展示</li>
+                                    <li onclick="<%= catering %>">优惠推送</li>
+                                    <li onclick="<%= catering %>">订位点餐</li>
+                                    <li onclick="<%= catering %>">手机定位</li>
+                                </ul>
+                            </div>
+                            <div class="img-decoration"></div>
+                        </div>
+                        <div class="field get-more">
+                            <div class="get-more-tip" onclick="<%= postLink%>" style="cursor:pointer">
+                                更多行业解决方案请注册获取
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="maxwon-modules-display">
+                    <div class="maxwon-app">
+                        <div class="content-wdith">
+                            <div class="product-line">
+                                <div class="line"></div>
+                                <h3>真旺云App自助开发运营平台</h3>
+                                <div class="line"></div>
+                            </div>
+                            <div class="maxwon-app-detail">
+                                多种功能的模块，15分钟快速开发一款原生App；手机App图形模块化开发，无需开发知识，有想法就能做；<div class="mobile-none"><br></div> 后台云端大数据管理，无需运营及营销知识，就能看懂图表；丰富多彩的应用模块，无需配置，轻松组成各种类型App应用；
+                                <div class="mobile-none"><br></div> 全网营销覆盖，无需重复开发，iOS、安卓、微信、网站，一键生成！
+                            </div>
+                            <div class="maxwon-app-content">
+                                <ul class="modules1">
+                                    <li>
+                                        <div><img src="<%= relativePath %>/images/website/product/hui/01.png" /></div>
+                                        <span>商品模块</span>
+                                    </li>
+                                    <div class="modules-hidden">
+                                        <div class="modules-close pc-none"><img class="pc-none" src="<%= relativePath %>/images/website/header-control.png"/></div>
+                                        <div class="modules_desc" style="padding: 20px 20px;">商品模块包括后台商品库存管理、上货、出货、编辑管理和商品分类管理、商品价格管理、商品运费管理、支付方式、商品评论等。所有需要交易的App都需要商品模块。</div>
+                                    </div>
+                                    <li>
+                                        <div><img src="<%= relativePath %>/images/website/product/hui/02.png" /></div>
+                                        <span>优惠券模块</span>
+                                    </li>
+                                    <div class="modules-hidden">
+                                        <div class="modules-close pc-none"><img class="pc-none" src="<%= relativePath %>/images/website/header-control.png"/></div>
+                                        <div class="modules_desc" style="padding: 20px 20px;">
+                                            优惠券模块提供优惠券管理、折扣管理。 必须结合商品系统才能使用。
+                                             线上、线下的优惠券活动是现在非常主流的一种消费刺激工具。
+                                        </div>
+                                    </div>
+                                    <li>
+                                        <div><img src="<%= relativePath %>/images/website/product/hui/03.png" /></div>
+                                        <span>会员模块</span>
+                                    </li>
+                                    <div class="modules-hidden">
+                                        <div class="modules-close pc-none"><img class="pc-none" src="<%= relativePath %>/images/website/header-control.png"/></div>
+                                        <div class="modules_desc" style="padding: 20px 20px;">
+                                            会员模块包括昵称、头像、地址、收藏、积分等。 是所有App功能的基石。
+                                             没有会员功能的App，为仅能展示内容的演示型App。
+                                        </div>
+                                    </div>
+                                    <li>
+                                        <div><img src="<%= relativePath %>/images/website/product/hui/04.png" /></div>
+                                        <span>门店模块</span>
+                                    </li>
+                                    <div class="modules-hidden">
+                                        <div class="modules-close pc-none"><img class="pc-none" src="<%= relativePath %>/images/website/header-control.png"/></div>
+                                        <div class="modules_desc" style="padding: 30px 20px;">
+                                            门店模块提供管理线下门店、门店地理定位的工具。 门店模块与其他模块结合轻松实现O2O模式。
+
+                                        </div>
+                                    </div>
+                                    <li>
+                                        <div><img src="<%= relativePath %>/images/website/product/hui/05.png" /></div>
+                                        <span>预定模块</span>
+                                    </li>
+                                    <div class="modules-hidden" style="margin-left: -490px;">
+                                        <div class="modules-close pc-none"><img class="pc-none" src="<%= relativePath %>/images/website/header-control.png"/></div>
+                                        <div class="modules_desc" style="padding: 20px 20px;">
+                                            预定模块提供时间预约、预定金支付、短信通知等功能。 结合门店模块实现线下预定，结合商品模块实现线上商品预定，是组合非常丰富的模块。
+                                        </div>
+                                    </div>
+                                    <li>
+                                        <div><img src="<%= relativePath %>/images/website/product/hui/06.png" /></div>
+                                        <span>客服模块</span>
+                                    </li>
+                                    <div class="modules-hidden" style="margin-left: -490px;">
+                                        <div class="modules-close pc-none"><img class="pc-none" src="<%= relativePath %>/images/website/header-control.png"/></div>
+                                        <div class="modules_desc" style="padding: 30px 20px;">客服模块提供在线客服管理的功能。 在线客服是现在商业化移动App必不可少的一部分。
+                                        </div>
+                                    </div>
+                                    <li>
+                                        <div><img src="<%= relativePath %>/images/website/product/hui/07.png" /></div>
+                                        <span>文章模块</span>
+                                    </li>
+                                    <div class="modules-hidden" style="margin-left: -490px;">
+                                        <div class="modules-close pc-none"><img class="pc-none" src="<%= relativePath %>/images/website/header-control.png"/></div>
+                                        <div class="modules_desc" style="padding: 30px 20px;">文章模块提供在线文案分类、管理的功能。 在线文案可以内嵌图片、视频。也提供把文案标题显示到App首页顶部Banner的功能。
+                                        </div>
+                                    </div>
+                                    <!--<div class="modules-hidden" style="margin-top: -140px;margin-left: 496px;">
+                                        <div class="modules_desc" style="padding: 25px 20px;display: block;">文章模块提供在线文案分类、管理的功能。 在线文案可以内嵌图片、视频。也提供把文案标题显示到App首页顶部Banner的功能。
+                                        </div>
+                                    </div>-->
+
+                                </ul>
+                                <ul class="modules2">
+                                    <li>
+                                        <div><img src="<%= relativePath %>/images/website/product/hui/08.png" /></div>
+                                        <span>一元夺宝模块</span>
+                                    </li>
+                                    <div class="modules-hidden">
+                                        <div class="modules-close pc-none"><img class="pc-none" src="<%= relativePath %>/images/website/header-control.png"/></div>
+                                        <div class="modules_desc" style="padding: 20px 20px;">
+                                            现在非常火热的一个概念，基本每个电商App需要的模块。需要结合商品模块才能使用。 贴心的晒单设置功能，经营用户口碑非常便利。
+
+                                        </div>
+                                    </div>
+                                    <li>
+                                        <div><img src="<%= relativePath %>/images/website/product/hui/09.png" /></div>
+                                        <span>即时通信模块</span>
+                                    </li>
+                                    <div class="modules-hidden">
+                                        <div class="modules-close pc-none"><img class="pc-none" src="<%= relativePath %>/images/website/header-control.png"/></div>
+                                        <div class="modules_desc" style="padding: 20px 20px;">
+                                            应用内即时通信，必须配合会员模块使用。<br> App用户可以便捷的相互沟通。
+                                             模块也贴心的提供了敏感词过滤功能，自定义敏感词更是独有功能。
+                                        </div>
+                                    </div>
+                                    <li>
+                                        <div><img src="<%= relativePath %>/images/website/product/hui/10.png" /></div>
+                                        <span>社交模块</span>
+                                    </li>
+                                    <div class="modules-hidden">
+                                        <div class="modules-close pc-none"><img class="pc-none" src="<%= relativePath %>/images/website/header-control.png"/></div>
+                                        <div class="modules_desc" style="padding: 30px 20px;">
+                                            社交模块提供类似微信的好友圈功能和腾讯个人空间的广场功能。 当然对于文字也提供了敏感词过滤。
+                                        </div>
+                                    </div>
+                                    <li>
+                                        <div><img src="<%= relativePath %>/images/website/product/hui/11.png" /></div>
+                                        <span>论坛模块</span>
+                                    </li>
+                                    <div class="modules-hidden">
+                                        <div class="modules-close pc-none"><img class="pc-none" src="<%= relativePath %>/images/website/header-control.png"/></div>
+                                        <div class="modules_desc" style="padding: 20px 20px;">
+                                            论坛模块提供基于帖子的交流平台。 必须结合会员系统才能使用。
+                                             论坛是现在主流的线上互动交流社区。
+                                             基于论坛可以实现丰富的用户经营活动。
+                                        </div>
+                                    </div>
+                                    <li>
+                                        <div><img src="<%= relativePath %>/images/website/product/hui/12.png" /></div>
+                                        <span>支付模块</span>
+                                    </li>
+                                    <div class="modules-hidden" style="margin-left: -490px;">
+                                        <div class="modules-close pc-none"><img class="pc-none" src="<%= relativePath %>/images/website/header-control.png"/></div>
+                                        <div class="modules_desc" style="padding: 30px 20px;">
+                                            让开发者能够通过短短的几行代码，就能实现各种支付，以及来进行支付功能的设置和管理。
+
+                                        </div>
+                                    </div>
+                                    <li>
+                                        <div><img src="<%= relativePath %>/images/website/product/hui/13.png" /></div>
+                                        <span>订单模块</span>
+                                    </li>
+                                    <div class="modules-hidden" style="margin-left: -490px;">
+                                        <div class="modules-close pc-none"><img class="pc-none" src="<%= relativePath %>/images/website/header-control.png"/></div>
+                                        <div class="modules_desc" style="padding: 30px 20px;">
+                                            订单模块包括订单管理、订单导出、订单追踪、短信通知、订单评论等。 所有需要交易的App都需要订单模块。
+                                        </div>
+                                    </div>
+                                    <li>
+                                        <div><img src="<%= relativePath %>/images/website/product/hui/14.png" /></div>
+                                        <span>更多</span>
+                                    </li>
+                                    <div class="modules-hidden" style="margin-left: -490px;">
+                                        <div class="modules-close pc-none"><img class="pc-none" src="<%= relativePath %>/images/website/header-control.png"/></div>
+                                        <div class="modules_desc" style="padding: 30px 20px">
+                                            真旺云App自助开发运营平台，使用方法及账户注册，请联系 <br>400-804-5550
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="maxwon-service">
+                        <div class="service-title">
+                            <div class="line"></div>
+                            <h3>个性化定制服务</h3>
+                            <div class="line"></div>
+                        </div>
+
+                        <div class="service_desc">
+                            真旺云平台开发团队多年App开发经验,<br>专注App,iOS,Android,HTML5,移动网站软件开发；<br> 除自有产品真旺云应用平台外已上线不同平台项目近千款,<br>服务知名企业客户3000余家，<br>国内外各类应用市场下载App量过亿！
+                        </div>
+                        <div class="sercice_img">
+                            <img src="<%= relativePath %>/images/website/product/s1.png" />
+                            <img src="<%= relativePath %>/images/website/product/s2.png" />
+                            <img src="<%= relativePath %>/images/website/product/s3.png" />
+                            <img src="<%= relativePath %>/images/website/product/s4.png" />
+                            <img src="<%= relativePath %>/images/website/product/s5.png" />
+                        </div>
+                        <div class="service_desc">如果您想开发一款与众不同的App，就请注册或拨打热线索取案例！</div>
+
+                    </div>
+                </div>
+
+                <% include website/footer.html %>
+                    <script src='<%= relativePath %>/javascript/website/product.js'></script>
+                    </body>
+
+        </html>

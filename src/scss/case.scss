@@ -1,0 +1,232 @@
+@import "./website/common/_var.scss";
+@import "./website/common/header.scss";
+@import "./website/common/footer.scss";
+@import "./website/common/_kit.scss";
+@import "./website/common/_reset.scss"; //PC
+
+@media (min-width: $mobile-break-point) {
+    body {
+        background-color: #fff;
+    }
+    .pcimg-none, .mobile-tborder{
+        display: none;
+    }
+
+    .casebg {
+        width: 100%;
+        height: 390px;
+        background-image: url("../images/website/case/case_bg.jpg");
+        background-size: cover;
+        
+        & > div{
+            padding-top: 230px;
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+            
+        }
+    }
+
+ 
+    .case_demo {
+        background-color: #f2f2f2;
+    }
+    .case_width {
+        height: 550px;
+    }
+    .case_demo .case_demowidth {
+        width: 414px;
+        margin-top: 50px;
+    }
+    .case_fl > div > div {
+        float: left;
+    }
+    .case_demoimg {
+      padding-left: 15px;
+    }
+    .case_demoimg > img {
+      margin-left: 10px;
+    }
+    .case_serviceimg {
+        padding-left: 30px;
+    }
+    .case_serviceimg > img {
+        margin-left: 30px;
+    }
+    .case_title {
+        color: #666666;
+        font-size: 20px;
+        text-align: center;
+    }
+    .case_img {
+        margin-top: 45px;
+    }
+    .case_img img {
+        width: 60px;
+        height: 60px;        
+        margin-left: 30px;
+    }
+     .case_img img:nth-of-type(1){
+         margin-left: 0;
+     }
+    .case_img div {
+        color: #000000;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 40px;
+    }
+    .case_content {
+        font-size: 15px;
+        color: #000;
+        line-height: 24px;
+        margin-top: 26px;
+    }
+    .case_img h4 {
+        text-align: center;
+    }
+
+    .case_casewidthright {
+        width: 380px;
+        margin-left: 45px;
+        margin-top: 40px;
+    }
+    
+    .case_caseimgleft img{
+        margin-left: 10px;
+    }
+    
+    .case_service {
+        background-color: #f2f2f2;
+    }
+    .case_servicewidth {
+        width: 320px;
+        margin-top: 50px;
+    }
+    .case_eduwidthright {
+        width: 400px;
+        margin-top: 35px;
+    }
+    .case_eduimgleft{
+        margin-left: 30px;
+    }
+    .case_eduimgleft img {
+        margin-right: 40px;
+    }
+    .case_eduwidthright {
+        margin-left: 50px;
+    }
+    .case_cat {
+        background-color: #f2f2f2;
+    }
+    .case_catwidth {
+        width: 465px;
+        margin-top: 50px;
+    }
+    .case_catimg {
+        margin-left: 50px;
+    }
+    .case_catimg img {
+        margin-left: 20px;
+    }
+    .case_demo,.case_case,.case_service,.case_edu,.case_cat > div{
+        padding-top: 90px;
+    }
+    #case {}
+}
+//mobile
+@media (max-width: $mobile-break-point - 1) {
+    body{
+        font-size: 62.5%;
+    }
+    .casebg{
+        width: 100%;
+        height: 227px;
+        background-image: url("../images/website/case/casemobilebg.jpg");
+        background-size: cover;
+        
+        & > div{
+            padding-top: 100px;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: 600;
+        }
+    }
+    
+    .mainStyle{
+        width: 100%;
+    }
+    
+    .case_demo, .case_case, .case_service, .case_edu, .case_cat > div {
+        padding: 20px 0;
+    }
+
+    .case_case, .case_edu{
+        background-color: #f2f2f2;
+    }
+
+    .mobile-none{
+        display: none;
+    }
+
+    .pcimg-none > center > img{
+        
+    }
+    .pcimg-none{
+        & > center > img{
+            margin-left: 5px;
+                &:nth-of-type(1){
+                    margin-left: 0;
+                }
+        }
+        padding:5% 0;
+    }
+    
+    .case_demo, .case_case, .case_service, .case_cat, .case_edu{
+//      display: flex;
+        .case_title{
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-align: center;
+            line-height: 30px;
+            margin: 20px 0 35px 0;
+            display: flex;
+            display: -webkit-flex ;
+            flex-direction: row;
+            justify-content: center;           
+            align-items: center;
+            & > div:nth-of-type(2){
+                padding: 0 8px;
+            }
+            .mobile-tborder{
+                border-bottom:1px solid #ccc ;width: 30%;height: 1px;
+            }
+
+        }
+        .case_img > center > img{
+            width: 14%;
+            margin-left: 5%;
+            &:nth-of-type(1){
+                margin-left: 0;
+            }
+        }
+        .case_img > div{
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            margin:20px 0;
+        }
+        .case_content{
+            font-size: 1rem;
+            line-height: 1.6rem;
+            padding: 0 5%;
+            margin-top: 5px;            
+        }
+
+    }
+    
+    #case {
+        
+    }
+}

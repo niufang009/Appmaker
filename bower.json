@@ -1,0 +1,32 @@
+{
+  "name": "LeapCloud",
+  "version": "1.0.0",
+  "homepage": "",
+  "authors": [
+    "AppCube"
+  ],
+  "description": "LeapCloud",
+  "main": "app.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "AppCube"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "backbone": "1.0.0",
+    "jquery": "1.10.2",
+    "store": "~2.1.6",
+    "underscore": "~1.8.3",
+  },
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/lib",
+    "test",
+    "tests"
+  ]
+}

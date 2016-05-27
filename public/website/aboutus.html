@@ -1,0 +1,387 @@
+
+
+<!doctype html>
+<html>
+    <head>
+        <title>关于我们——真旺云应用平台</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="./stylesheets/aboutus.css?v=1464229120636" />
+
+        
+
+    <meta charset="utf-8">
+
+    <meta name="Keywords" content="真旺云,MaxWon,自助App开发,移动App制作平台,App外包开发,手机App软件，快速App开发平台"/>
+    <meta name="Description" content="真旺云是集专业与便捷于一体的App自助生产运营平台，无需App外包开发也能在线制作生成原生手机App，苹果iOS、安卓Android、微信多系统同步生成。随时预览App制作效果，在线移动App开发平台就选真旺云。">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta property="qc:admins" content="215146377565101003636" />
+    <link rel="shortcut icon" href="./images/website/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <script type="text/javascript">
+      var windowbreakpoint = 769;
+      if(window.innerWidth && window.innerWidth < windowbreakpoint){
+        document.getElementsByTagName("html")[0].style.fontSize = Math.pow(window.innerWidth/windowbreakpoint,0.4)*100 +"%";
+      }
+    </script>
+  
+    <script type="text/javascript">
+    function checkBrowser(v) {
+        var userAgent = navigator.userAgent.toLowerCase(), low = false;
+        if (isChromium(userAgent)) {
+            low = chromium(userAgent, v.GG);
+        } else if (isWebkit(userAgent)) {
+            low = Safari(userAgent, v.Safari);
+        } else if (isFireFox(userAgent)) {
+            low = FireFox(userAgent, v.FF)
+        } else if (isIE) {
+            low = IE(v.IE)
+        } else {
+            low = true;
+        }
+        checkjump(low)
+    }
+
+    function checkjump(low) {
+        if(low) window.location.href = "/outdatedbrowser" + window.location.search + "?version=001";
+    }
+
+    function Safari(userAgent, v) {
+        var version = userAgent.match(/version\/([\d.]+)/)[1];
+        return parseInt(version) < v;
+    }
+
+    function FireFox(userAgent, v) {
+        var version = userAgent.match(/firefox\/([\d.]+)/)[1];
+        return parseInt(version) < v;
+    }
+
+    function chromium(userAgent, v) {
+        var version = userAgent.match(/chrome\/([\d.]+)/)[1];
+        var versionNum = version.split(".")[0];
+        return parseInt(versionNum) < v;
+    }
+
+    function IE(v) {
+        var version = 999999;
+        if (navigator.appName == 'Microsoft Internet Explorer') {
+            new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent);
+            version = parseInt(RegExp.$1);
+        } else if ("ActiveXObject" in window) {
+            version = 11;
+        }
+        return parseInt(version) < v;
+    };
+// 判断是否为chrome内核浏览器
+    function isChromium(userAgent) {
+        var chromium = "mozilla/&&applewebkit/&&chrome/&&safari/".split("&&");
+        for (var i = 0; i < chromium.length; i++)
+            if (userAgent.indexOf(chromium[i]) < 0)
+                return false;
+        return true;
+    }
+
+    // 判断是否为webkit内核浏览器
+    function isWebkit(userAgent) {
+        if (userAgent.indexOf("applewebkit/") < 0)
+            return false;
+        return true;
+    }
+
+    function isFireFox(userAgent) {
+        if (userAgent.indexOf("firefox/") < 0)
+            return false;
+        return true;
+    }
+
+    function isIE(userAgent) {
+        if ((navigator.userAgent.indexOf('MSIE') >= 0) && (navigator.userAgent.indexOf('Opera') < 0))
+            return true;
+        return false;
+    }
+
+    //检查浏览器
+    checkBrowser({IE: 9, FF: 30, GG: 20, Safari: 4});
+
+    // //隐身模式判断
+    // try {
+    //     window.localStorage.setItem('testkey', '');
+    // } catch (error) {
+    //     if (window.locale === 'zh') {
+    //         alert("请关闭隐身模式");
+    //     } else {
+    //         alert("Please exit private mode");
+    //     }
+    // }
+
+</script>
+</head>
+
+<body >
+    <div id="mobile-top">
+        <a href="javascript:void(0)" id="mobile-nav-control" class="hide" ><span class="clearmid"></span><i></i></a>
+        <a class="mobileLogo" href='javascript:{ window.location.href =  "/" + window.location.search }'>
+          <img src="./images/website/mobileLogo.png" />
+        </a>
+        <ul id="mobile-navbar" >
+          <li class="navli ready ">
+              <a href='javascript:{ window.location.href = "http://" + window.location.host + "/" + window.location.search }'>
+                  首页
+              </a>
+          </li>
+          <li class="navli ready ">
+              <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/ourproduct" + window.location.search }'>
+                  产品中心
+              </a>
+          </li>
+          <li class="navli ready ">
+              <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/case" + window.location.search }'>
+                  案例展示
+              </a>
+          </li>
+          <li class="navli ready ">
+              <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/cowork" + window.location.search }'>
+                  渠道合作
+              </a>
+          </li>
+          <li class="navli ready active">
+              <a href='javascript:{ window.location.href = "http://" + window.location.host +  "/website/aboutus" + window.location.search }'>
+                  关于我们
+              </a>
+          </li>
+          <li class="navli ready ">
+              <div class="user-control-innerwrapper">
+                  <a class="login" href="javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login&#34; + window.location.search }">注册</a>
+              </div>
+          </li>
+        </ul>
+    </div>
+
+    <div id="header" class='fixed-top floating'>
+        <div class="mainStyle">
+            <div id="header-logo" >
+                <a class="WhiteLogo" style=display:none href='javascript:{ window.location.href =  "/" + window.location.search }'>
+                    <img src="./images/website/logoWhite.png" />
+                </a>
+                <a class="ColorLogo"   href='javascript:{ window.location.href =  "/" + window.location.search }'>
+                    <img src="./images/website/logoBlue.png" />
+                </a>
+            </div>
+            <ul id="navbar" >
+                <li class="navli ">
+                    <a href='javascript:{ window.location.href = "http://" + window.location.host + "/" + window.location.search }'>
+                        首页
+                    </a>
+                </li>
+                <li class="navli ">
+                    <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/ourproduct" + window.location.search }'>
+                        产品中心
+                    </a>
+
+                    <div class="dropdown">
+                        <div class="icon-wrapper"><span class="center-icon"></span></div>
+                        <ul>
+                            <li ><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/a1" + window.location.search }'>电商行业解决方案</a></li>
+                            <li ><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/a2" + window.location.search }'>社交行业解决方案</a></li>
+                            <li ><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/a3" + window.location.search }'>服务行业解决方案</a></li>
+                            <li ><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/a4" + window.location.search }'>教育行业解决方案</a></li>
+                            <li ><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/a5" + window.location.search }'>餐饮行业解决方案</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="navli ">
+                    <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/case" + window.location.search }'>
+                        案例展示
+                    </a>
+                </li>
+                <li class="navli ">
+                    <a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/cowork" + window.location.search }'>
+                        渠道合作
+                    </a>
+                </li>
+                <li class="navli active">
+                    <a href='javascript:{ window.location.href = "http://" + window.location.host +  "/website/aboutus" + window.location.search }'>
+                        关于我们
+                    </a>
+                </li>
+                <li class="navli">
+                    <div class="divider"></div>
+                </li>
+                <li class="navli ">
+                    <div class="user-control-innerwrapper">
+                        <a class="login" href="javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login&#34; + window.location.search }">登录/注册</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+        <div class="aboutusbg">
+            <div class="aboutus_title mainStyle">
+               <div>关于我们</div>
+               <span></span>
+            </div>
+        </div>
+
+        <div id="aboutus" class="mainStyle">
+            <h2>上海力谱宿云信息科技有限公司</h2>
+             <div class="aboutus_detail">创立于2010年，公司总部在上海，随着业务的快速发展将在北京、广州设立分支机构。公司专注于移动互联领域，是国内领先的企业移动云服务运营商，为企业移动信息化提供前沿的云计算平台和解决方案。公司以移动互联行业应用软件即服务（SaaS）、平台即服务（PaaS）和移动商业价值解决方案等为主营业务，致力“让企业移动信息化更简单”！</div>
+             <div class="aboutus_detail">上海力谱宿云现有的服务产品包括为企业提供移动业务研发与运营的一站式云服务平台（MaxLeap）、“真旺云”移动电商全网营销服务应用平台（MaxWon）、企业个性化需求定制开发的移动应用综合解决方案（MaxApps）等。上海力谱宿云的移动云服务模式，打破企业移动信息化建设壁垒，使企业无需担心业务平台的安全及稳定性，让企业能够“省心、省力、省钱”，更专注于自身业务的发展。</div>
+             <div class="aboutus_detail">目前，上海力谱宿云正在为3000多家中小型企业提供移动互联云服务，行业覆盖移动电商、咨询服务、游戏、金融、房地产、连锁零售和教育培训等，越来越多的企业将真正体验到移动云服务带来的快速部署、按需定制、全方案服务、成本低廉的巨大好处！上海力谱宿云将围绕国家战略性新兴产业、国家科技创新体系建设要求，提升移动互联领域的专业技术服务能力，发展成为创新型的“企业移动云服务运营商”！</div>
+            
+             <h2>人员结构</h2>
+            <div class="aboutusperson_detail">
+                70人研发团队、30人设计团队，具有多年移动应用开发经验。<br>
+        技术总监：美国海归博士，具有12年海外顶级投行核心系统开发经验；<br>
+        产品总监：8年移动平台研发经验，曾负责十多款超千万用户量的移动应用；<br>
+        运维总监：原就职于SAP，负责保障云平台研发和维护；<br>
+        设计总监：来自搜狐，总领美工设计。<br>
+        公司全员配备苹果30寸iMAC和MAC Book Pro。BAT级别的产品团队为交付给客户超一流水准的服务而努力！<br>
+            </div>   
+            
+            <h2>联系我们</h2>
+            <div class="aboutusperson_detail">
+                地址：上海市徐汇区宜山路888号新银大厦21层<br>
+        邮编：200233<br>
+        电话：021-64225098<br>
+        网站：MaxLeap：<a href="http://www.maxleap.cn">http://www.maxleap.cn</a><br>
+<!--        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MaxWon：<a href="http://www.maxwon.cn">http://www.maxwon.cn</a><br>
+-->        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MaxApps：<a href="http://www.maxapps.cn">http://www.maxapps.cn</a><br>
+            </div>
+            <br><br><br>
+        </div>
+
+          <div id="mobile-righter" >
+      <div class="cubes">
+
+          <div class="cube head" >
+              <p>　</p>
+          </div>
+          <div class="visiblecubes" style="display:none">
+              <div class="cube qq" onclick='javascript:{window.open("http://wpa.qq.com/msgrd?v=3&uin=3115292289&site=qq&menu=yes")}' >
+                  <img class="sicon support" src="./images/website/right-qq.png">
+                  <p>在线客服</p>
+              </div>
+              <div class="cube" onclick='javascript:{ $("#qiao-icon-group1")[0].click() }'>
+                  <img class="sicon price" src="./images/website/right-rmb.png">
+                  <p>报价咨询</p>
+              </div>
+              <a class="cube" href="tel:400-804-5550" onclick="javascript:void(0)">
+                  <img class="sicon tel" src="./images/website/right-tel.png">
+                  <p>电话咨询</p>
+                  <!-- <div class="phone400">400-804-5550</div> -->
+              </a>
+              <div class="cube" onclick='javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login#register&#34; + window.location.search }' >
+                  <img class="sicon login" src="./images/website/right-signin.png">
+                  <p >注册</p>
+              </div>
+              <div class="cube holder" >
+                  <p>　</p>
+              </div>
+          </div>
+          <div class="cube foot" ></div>
+      </div>   
+      <div id="righter-control" tab-index="-1" class="hide">         
+          <img src="./images/website/header-control.png" width="30%">
+      </div>
+  </div>
+
+  <div id="righter" >
+      <div class="cube" onclick='javascript:{window.open("http://wpa.qq.com/msgrd?v=3&uin=3115292289&site=qq&menu=yes")}' >
+          <div class="sicon support"></div>
+          <p>在线客服</p>
+      </div>
+      <div class="cube" onclick='javascript:{ $("#qiao-icon-group1")[0].click() }'><div class="sicon price"></div><p>报价咨询</p></div>
+      <div class="cube" >
+          <div class="sicon tel"></div>
+          <p>电话咨询</p>
+          <div class="phone400">400-804-5550</div>
+      </div>
+      <div class="cube" onclick='javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login#register&#34; + window.location.search }' >
+      <div class="sicon login"></div><p >注册</p></div>
+  </div>
+
+
+<div class="bottomline"></div>
+<div id="footer" class="mainStyle"  >
+
+    <div id="goTop">
+        <img src="./images/website/goTop.png" width="50" />
+    </div>
+
+  <div class="address" >
+    <div><img src="./images/website/sColorLogo.png" width="145" /></div>
+    <div class="text start"> 上海徐汇区宜山路888号新银大厦21层 </div>
+    <div class="text end"> 咨询电话：400-804-5550 </div>
+    <div class="netMedia"> 
+      <a class="" href="http://weibo.com/maxleap" >
+        <img src="./images/website/weibo.png" width="45">
+      </a>
+      <a style="position:relative">
+        <img onmouseover="javascript:{$(this).next().fadeIn(100) }" onmouseout="javascript:{$(this).next().fadeOut(100) }" src="./images/website/wechat.png" width="45">
+        <img class="wechatQr" src="./images/website/wechatQRcode.png" />
+      </a>
+    </div>
+  </div>
+  <div class="websiteMap" >
+    <ul class="end">
+      <li class="head">真旺云</li>
+      <li><a href='javascript:{ window.location.href = "http://" + window.location.host + "/" + window.location.search }'>首页</a></li>
+      <li><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/ourproduct" + window.location.search }'>产品中心</a></li>
+      <li><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/case" + window.location.search }'>案例展示</a></li>
+      <li><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/cowork" + window.location.search }'>渠道合作</a></li>
+      <li><a href='javascript:{ window.location.href = "http://" + window.location.host + "/website/aboutus" + window.location.search }'>关于我们</a></li>
+      <li><a href='javascript:{ window.location.href = &#34;https://&#34; + window.location.host + &#34;/website/login&#34; + window.location.search }'>登录/注册</a></li>
+    </ul>
+    <ul >
+      <li class="head">合作伙伴</li>
+      <li><a target="_blank" href='http://aws.amazon.com/'>亚马逊AWS</a></li>
+      <li><a target="_blank" href='http://www.hwclouds.com/'>华为云</a></li>
+      <li><a target="_blank" href='http://www.azure.cn/'>Azure</a></li>
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<div class="copyRight " >Copyright © 2016 MaxMon. All Rights reserved. 沪ICP备15041312号-2</div>
+
+<script src='./javascript/lib/jquery/jquery.min.js'></script>
+<script src='./javascript/lib/Swiper/swiper2.min.js'></script>
+<script src='./javascript/website/common/init.js?v=1464229120636'></script>
+
+<script>
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    var trackingid;
+    switch(window.location.hostname){
+        case "app.maxapps.cn" : trackingid = "UA-70747550-3";break;
+        case "www.maxapps.cn" : trackingid = "UA-70747550-6";break;
+        default : trackingid = "UA-70747550-5";break;
+    }
+
+    ga('create', trackingid , 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F88346f1b2c10f06fadc90fd5cfad5786' type='text/javascript'%3E%3C/script%3E"))
+</script>
+
+<!--<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9e77a5e78f320933d8149380a3e6c7ff";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>-->
+
+    </body>
+</html>

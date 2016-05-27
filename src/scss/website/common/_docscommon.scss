@@ -1,0 +1,177 @@
+.docs-common-header.header{
+	.wrapper{
+		width: 100%;
+		text-align: left;
+	}
+	a{
+		display: inline-block;
+		margin-top: 30px;
+		color: $lightBlack;
+		font-size: 14px;
+		&:hover{
+			color: $white;
+		}
+		&:before{
+			margin-right: 5px;
+			color: $green;
+			display: inline-block;
+			vertical-align: -2px;
+			overflow: hidden;
+		}
+	}
+	.api-reference{
+		float: right;
+		margin-top: -120px;
+		li{
+			margin-right: 20px;
+			a{
+				@include action-button(130px, 30px, $white, rgba(0,0,0,0.2));
+				text-decoration: none;
+			}
+		}
+	}
+
+	.crumbs{
+		margin-top: 15px;
+		a, i{
+			font-size: 14px;
+			color: $white;
+			pointer-events: none;
+		}
+		.link{
+			pointer-events: all;
+			text-decoration: underline;
+			&:hover{
+				color: $white;
+			}
+			&:before{
+				margin-right: 5px;
+				display: inline-block;
+				vertical-align: -2px;
+				overflow: hidden;
+				color: $white;
+			}
+		}
+	}
+}
+
+.main-section {
+	$textPaddingLR: 28px;
+
+	.main-content {
+		.content{
+			color: $normalCodeColor;
+			font-size: 18px;
+		}
+		.content h1{
+			padding-left: $textPaddingLR;
+			@extend .commonH1;
+		}
+		.content h2{
+			padding-left: $textPaddingLR;
+			@extend .commonH2;
+			font-size: 32px;
+		}
+		.content h3, .content h4, .content h5, .content h6{
+			padding-left: $textPaddingLR;
+			@extend .commonH3;
+			font-size: 22px;
+		}
+		.content pre, .content blockquote{
+			margin-left: $textPaddingLR;
+			margin-right: $textPaddingLR;
+			@extend .commonPre;
+		}
+		.highlight .err{
+			@extend .commonHighlightError;
+		}
+		.content code{
+			@extend .commonCode;
+		}
+		.highlight, .highlight .w{
+			@extend .commonHighlightNormal;
+		}
+		.content p{
+			@extend .commonP;
+		}
+		.content strong{
+			@extend .commonCode;
+		}
+		.content ul,
+		.content ol{
+			@extend .commonP;
+			margin-left: 8px;
+		}
+		.content aside{
+			@extend .commonAside;
+			margin-left: $textPaddingLR;
+			margin-right: $textPaddingLR;
+			position: relative;
+			padding: 28px 28px 28px 28px;
+			width: calc(100% - 52px);
+			display: table;
+			>span{
+				display: table-cell;
+				vertical-align: middle;
+			}
+			>.icon{
+				background-repeat: no-repeat;
+			}
+		}
+		.content aside.notice{
+			background-color: #83C49C;
+		}
+		.content aside.notice .icon{
+			width: 100px;
+			height: 80px;
+			background-image: url('../images/icon_information.png');
+		}
+		.content aside.warning{
+			background-color: #DB8081;
+		}
+		.content aside.warning .icon{
+			width: 113px;
+			height: 80px;
+			background-image: url('../images/icon_caveat.png');
+		}
+		.content aside.success{
+			background-color: #83C49C;
+		}
+		.content aside.success .icon{
+			background-image: url('../images/icon_information.png');
+		}
+		.content table{
+			margin-left: 28px;
+			margin-right: 28px;
+			width: calc(100% - 52px);
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+		.author-info,
+		.author-github-info{
+			display: inline;
+			padding-right: 0 ;
+			font-size: 15px !important;
+			color: $lightBlack !important;
+		}
+		.author-github-info{
+			margin-left: 12px;
+			padding: 0 !important;
+		}
+	}
+
+	@media screen and (max-width: $middle-width){
+		.main-content{
+			>.content{
+				margin-left: -20px;
+				margin-right: -20px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 700px){
+	.header .api-reference{
+		display: none;
+	}
+}
